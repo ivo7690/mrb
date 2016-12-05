@@ -1,0 +1,196 @@
+﻿@{
+    ViewBag.Title = "Calacatta Marble";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+@section Meta{
+    @*<meta name="description" content="" />*@
+}
+@section Style{
+    <link href="~/Content/materials.css" rel="stylesheet" />
+    <link href="~/Scripts/fancybox/jquery.fancybox.css" rel="stylesheet" />
+}
+@section Scripts{
+    <script src="~/Scripts/fancybox/jquery.fancybox.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".materialGallery").fancybox();
+        });
+    </script>
+}
+@section Header{
+    <div class="animatedParent animateOnce">
+        <div class="headerBig-content animated fadeInDown" style="background-image:url(http://opustone.com/media/k2/galleries/1069/Calacatta%20Porcelain%20Tile%20Opustone09b.jpg);">
+            <div class="container">
+                <h2>@ViewBag.Title</h2>
+                <h4>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </h4>
+                <a class="btn btn-mrb btn-lg" href="/quote">Get A Quote </a>
+            </div>
+        </div>
+    </div>
+}
+<div class="animatedParent animateOnce">
+    <div class="container body-content animated fadeIn slower delay-750">
+        <p>
+            Calacatta marble is a white-coloured marble with darkish grey veins, Calacatta marble together with Statuario
+            is considered to be part of the top range quality marbles coming from Carrara area. Calacatta marble shows bolder
+            veins pattern and much whiter background colour compared to Carrara or Arabescato marble.
+        </p>
+        <p>
+            Calacatta marble is mainly used in interior applications for flooring, walls covering and kitchen or vanity top,
+            it’s also often used for bookmatched applications which makes stand out its beauty at the best.
+        </p>
+        <p>
+            With our existing extensive ranges of stone tiles,we can now supply cut to size slabs and bespoke size stone tiles
+            to your specification, we can help and assist you in regards to pricing and availability.
+        </p>
+        <hr />
+        <div class="row">
+            <div class="col-sm-3 col-xs-6">
+                <div class="slabContainer">
+                    <div class="slabImage">
+                        <a class="materialGallery" rel="material" href="/Images/marble/calacatta.jpg" title="Calacatta">
+                            <img src="~/Images/marble/calacatta.jpg" />
+                        </a>
+                    </div>
+                    <div class="slabText">Calacatta</div>
+                </div>
+            </div>
+            <div class="col-sm-3 col-xs-6">
+                <div class="slabContainer">
+                    <div class="slabImage">
+                        <a class="materialGallery" rel="material" href="/Images/marble/calacatta-extra.jpg" title="Calacatta Extra">
+                            <img src="~/Images/marble/calacatta-extra.jpg" />
+                        </a>
+                    </div>
+                    <div class="slabText">Calacatta Extra</div>
+                </div>
+            </div>
+            <div class="col-sm-3 col-xs-6">
+                <div class="slabContainer">
+                    <div class="slabImage">
+                        <a class="materialGallery" rel="material" href="/Images/marble/top-quality-calacatta.jpg" title="Top Quality Calacatta">
+                            <img src="~/Images/marble/top-quality-calacatta.jpg" />
+                        </a>
+                    </div>
+                    <div class="slabText">Top Quality Calacatta</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid fatfooter" style="background-image:url('/Images/slabs-footer.jpg');background-position:center; padding:50px 0; margin-top:30px">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <p style="font-weight:300;font-size:28px;margin-bottom:20px">Request a quote, we will contact you within 48 hours.</p>
+                <a href="/quote" class="btn btn-default btn-lg" title="Get a quote">GET A QUOTE</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="animatedParent animateOnce">
+    <div class="container body-content animated fadeIn">
+        <h3>FAQ</h3>
+        <div class="row">
+            <div class="col-sm-6 faq">
+                <label>Could you please send to us a sample of "marble or stone"?</label>
+                <p>
+                    We can provide indicative sample 10 x 10 cm but we always advice that when dealing with natural stones you see nothing in a small sample. Natural stone background colour and veins pattern keep changing based on the actual slabs available. Never trust a sample but see what it is available in stock at the moment.
+                </p>
+            </div>
+            <div class="col-sm-6 faq">
+                <label>Where do you stock all the slabs?</label>
+                <p>
+                    We own marble quarries of Bianco and Rosa perlino in Altopiano di Asiago (Italy) and we stock all the slabs in Verona where we meticulously follow the entire manufacturing process at the highest standard.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 faq">
+                <label>How long does it take to the slabs/tiles/worktop/vanity top to be delivered in UK?</label>
+                <p>
+                    Everything depends from the size of the project. If you require less than 100m2 it usually takes 3 weeks (2 weeks to manufacture and 4 working days of transport from Verona or Carrara to London).
+                    <br />
+                    If the project requires for example more than 100m2 it takes between 4 to 5 weeks for delivery.
+                    <br />
+                    At the moment of the order you will receive the exact timing for delivery.
+                </p>
+            </div>
+            <div class="col-sm-6 faq">
+                <label>Do you stock marble tiles?</label>
+                <p>
+                    Yes of course. When buying stock of marble tiles the risk of receiving marble tiles which comes from different slabs batch it’s quite common , that’s why once we receive an order we process slabs or blocks which comes from the same batch, that means you don’t absolutely risk to get marble tiles which presents colour variations or different grade of quality between them, we guarantee you get a first quality selected product.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 faq">
+                <label>Can you supply Carrara bianco C or CD marble?</label>
+                <p>
+                    Yes we can but the real one only. Carrara’s always been the most known and researched marble in the world. Unluckly nowadays carrara marble market has become very misleading as other countries are producing similar lower quality product calling it CARRARA BIANCO.(or Carrera Bianco). The same is actually happening with others famous Italian marble like BOTTICINO CLASSICO and TRAVERTINE.
+                    <br />
+                    We suggest that before making a purchase you have to make sure which is the country of origin.
+                </p>
+            </div>
+            <div class="col-sm-6 faq">
+                <label>Do you provide the installation service?</label>
+                <p>
+                    We will advise on how to use or fit the marble, how to select the best stone based on your project requirements and all aspects and characteristic of stones but we don’t directly provide the installation service. We will give you a list of recommended fitters we collaborate with.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 faq">
+                <label>In which thickness are marble tiles or slabs available?</label>
+                <p>
+                    We can supply slabs in different thickness, usually 20 or 30 mm, different matter with regards to Marble Tiles which can be cut in 10 or 20 mm thickness.
+                </p>
+            </div>
+            <div class="col-sm-6 faq">
+                <label>Do you supply marble counter top or vanity top?</label>
+                <p>
+                    Yes of course. We need to get from you drawings with precise measures, edge profile type, thickness if 20 or 30 mm, hob cutout, number of tap holes.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="fatfooter">
+    <div class="container-fluid" style="background-image:url('/Images/slabs-footer.jpg');background-position:center; padding:50px 0; margin-top:30px">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 text-center">
+                    <p style="font-size:32px;color:#FFF;font-weight:300;border-bottom:1px solid #FFF;padding-left:5px;margin-bottom:20px">
+                        Get in touch for more information
+                    </p>
+                </div>
+            </div>
+            <div class="row callAction">
+                <div class="col-sm-6 col-sm-offset-3 text-center">
+
+                    <form id="formContact" action="/contact" method="post">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="nameContact" name="name" placeholder="Enter name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control required" name="mail" id="EmailContact" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="txtMessage" rows="5" class="form-control required" placeholder="Message"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-default pull-right">SEND</button>
+                        <div class="clearfix"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section fatfooter{
+
+}

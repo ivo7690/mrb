@@ -1,0 +1,49 @@
+﻿.materials-container {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 15px 0;
+    background-color: #333;
+    border-radius: 6px;
+    margin-top: 25px;
+}
+
+    .materials-container p {
+        color: #EEE;
+    }
+
+.material {
+    max-height: 190px;
+    overflow: hidden;
+}
+
+    .material img {
+        max-width: 100%;
+    }
+
+.nameMaterial {
+    text-align: center;
+    padding: 4px 0px;
+    height: 45px;
+    font-size: 15px !important;
+}
+
+.slabContainer {
+    max-height: 190px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slabImage img {
+    max-width: 100%;
+}
+
+.slabText {
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    text-align: center;
+    padding: 8px 10px;
+    color: #FFF;
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 15px !important;
+}

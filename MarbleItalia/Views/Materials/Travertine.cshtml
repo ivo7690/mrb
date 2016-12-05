@@ -1,0 +1,73 @@
+﻿@{
+    ViewBag.Title = "Travertine";
+}
+@section Meta{
+    @*<meta name="description" content="" />*@
+}
+@section Style{
+    <link href="~/Content/materials.css" rel="stylesheet" />
+    <link href="~/Scripts/fancybox/jquery.fancybox.css" rel="stylesheet" />
+}
+@section Scripts{
+    <script src="~/Scripts/fancybox/jquery.fancybox.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".materialGallery").fancybox();
+        });
+    </script>
+}
+@section Header{
+    <div class="header-content animated fadeInDown">
+    <h2>@ViewBag.Title</h2>
+</div>
+}
+
+<h3>Travertine</h3>
+<p>
+    Travertine is a stone which comes from Rome area in Italy, Travertine is distinguished for its famous little holes all around the surface which can also be covered with resin or concrete Travertine is used for both interior and exterior, don’t get confused with Turkish travertine which is becoming very popular even if it is a completely different material and presents a different grade of quality.
+</p>
+<hr />
+<div class="row">
+    <div class="col-sm-4 col-xs-6">
+        <div class="material">
+            <a class="materialGallery" rel="material" href="/images/marble/travertino-classico.jpg" title="Travertino Classico">
+                <img src="~/images/marble/travertino-classico.jpg" />
+            </a>
+        </div><p class="nameMaterial">Travertino Classico</p>
+    </div>
+    <div class="col-sm-4 col-xs-6">
+        <div class="material">
+            <a class="materialGallery" rel="material" href="/images/marble/travertino-giallo.jpg" title="Travertino Giallo">
+                <img src="~/images/marble/travertino-giallo.jpg" />
+            </a>
+        </div><p class="nameMaterial">Travertino Giallo</p>
+    </div>
+    <div class="col-sm-4 col-xs-6">
+        <div class="material">
+            <a class="materialGallery" rel="material" href="/images/marble/travertino-navona.jpg" title="Travertino Navona">
+                <img src="~/images/marble/travertino-navona.jpg" />
+            </a>
+        </div><p class="nameMaterial">Travertino Navona</p>
+    </div>
+    <div class="col-sm-4 col-xs-6">
+        <div class="material">
+            <a class="materialGallery" rel="material" href="/images/marble/travertino-noce.jpg" title="Travertino Noce">
+                <img src="~/images/marble/travertino-noce.jpg" />
+            </a>
+        </div><p class="nameMaterial">Travertino Noce</p>
+    </div>
+    <div class="col-sm-4 col-xs-6">
+        <div class="material">
+            <a class="materialGallery" rel="material" href="/images/marble/travertino-silver.jpg" title="Travertino Silver">
+                <img src="~/images/marble/travertino-silver.jpg" />
+            </a>
+        </div><p class="nameMaterial">Travertino Silver</p>
+    </div>
+    <div class="col-sm-4 col-xs-6">
+        <div class="material">
+            <a class="materialGallery" rel="material" href="/images/marble/travertino-tiziano.jpg" title="Travertino Tiziano">
+                <img src="~/images/marble/travertino-tiziano.jpg" />
+            </a>
+        </div><p class="nameMaterial">Travertino Tiziano</p>
+    </div>
+</div>

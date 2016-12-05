@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marble Italia Ltd | @ViewBag.Title</title>
+    <link rel="shortcut icon" href="/favicon.ico">
+    @RenderSection("Meta", required: false)
+    @*<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>*@
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700,100' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    @Styles.Render("~/Content/css")
+    <link href="~/Content/animations.css" rel="stylesheet" />
+    <link href="~/Content/responsive.css" rel="stylesheet" />
+    @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("style", required: false)
+    <script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-57818351-1', 'auto');
+    ga('send', 'pageview');
+
+    </script>
+</head>
+<body>
+    <div class="animatedParent animateOnce">
+        <div class="social animated fadeInRight">
+            <a href="https://www.facebook.com/mrbitalia" title="Marble Italia - Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/Marble_Italia" title="Marble Italia - Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/company/marble-italia-ltd" title="Marble Italia - Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <a href="skype:mrbitaliauk " title="Marble Italia - Skype"><i class="fa fa-skype"></i></a>
+            <a href="https://plus.google.com/102862187263565659807/posts" title="Marble Italia - GooglePlus" target="_blank"><i class="fa fa-google-plus"></i></a>
+        </div>
+    </div>
+    @Html.Partial("_Menu")
+    <header class="animatedParent animateOnce">
+        @*<div class="social-header visible-xs animatedParent animateOnce">
+                <a href="https://www.facebook.com/mrbitalia" title="Marble Italia - Facebook" target="_blank" class="animated fadeInDown"><i class="fa fa-facebook"></i></a>
+                <a href="https://twitter.com/Marble_Italia" title="Marble Italia - Twitter" target="_blank" class="animated fadeInUp"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/company/marble-italia-ltd" title="Marble Italia - Linkedin" target="_blank" class="animated fadeInDown"><i class="fa fa-linkedin"></i></a>
+                <a href="skype:mrbitaliauk " title="Marble Italia - Skype" class="animated fadeInUp"><i class="fa fa-skype"></i></a>
+                <a href="https://plus.google.com/102862187263565659807/posts" title="Marble Italia - GooglePlus" target="_blank" class="animated fadeInDown"><i class="fa fa-google-plus"></i></a>
+            </div>*@
+        @RenderSection("Header", required: false)
+    </header>
+    <div class="container body-content animatedParent animateOnce">
+        <div class="row animated fadeIn slower delay-750">
+            <div class="col-sm-9" style="border-right: 1px solid #EBEBEB;">
+                @RenderBody()
+            </div>
+            <div class="col-sm-3 hidden-xs" id="col-right" style="padding-bottom:30px;padding-top:15px;">
+                @*<div>
+                    <a href="http://www.100percentdesign.co.uk/" title="100% Design" target="_blank">
+                        <img src="~/Images/100percentdesign_vertical.jpg" alt="100% Design" style="max-width:260px" />
+                    </a>
+                </div>*@
+                <h4>Get a quote</h4>
+                <p>
+                    Request a quote, we will contact you within 48 hours.
+
+                </p>
+                <a href="/quote" class="btn btn-default" style="margin:0 0 10px">Get a quote</a>
+                <h4><a href="/gallery">Gallery</a> </h4>
+                <a href="/gallery">
+                    <div id="galleryPreview">
+                        <img src="~/Images/commongallery/marbleialia_marmo rosso e multicolor bocciardato fine.jpg" alt="marble rosso bocciardato" />
+                        <img src="~/Images/commongallery/marbleitalia_bianco-Covelano.jpg" alt="bianco covelano" />
+                        <img src="~/Images/commongallery/marbleitalia_CUBETTI.jpg" alt="cubs" />
+                        <img src="~/Images/commongallery/marbleitalia_Fontana di Mori2.jpg" alt="marble fountain" />
+                        <img src="~/Images/commongallery/marbleitalia_img459.jpg" alt="img459" />
+                        <img src="~/Images/commongallery/marbleitalia_kitchen2.jpg" alt="kitchen" />
+                        <img src="~/Images/commongallery/marbleitalia_PIASTRELLE-PIANO-CAVA-SCHEDA-TEC-7.jpg" alt="piano cava" />
+                        <img src="~/Images/commongallery/marbleitalia_statuario.jpg" alt="statuario" />
+                        <img src="~/Images/commongallery/marbleitalia_Statuario4.jpg" alt="statuario" />
+                        <img src="~/Images/commongallery/marbleitalia_Universita di TN-02_bassa.jpg" alt="Facades" />
+                    </div>
+                </a>
+                <h4>Get in touch</h4>
+                <form id="formContact" action="/contact" method="post">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="nameContact" name="name" placeholder="Enter name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control required" name="mail" id="EmailContact" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="txtMessage" class="form-control required" placeholder="Message"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-default">Send</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <section class="fatfooter">
+        @RenderSection("fatfooter", required: false)
+    </section>
+    <footer>
+        <hr />
+        <div class="row">
+            <div class="col-sm-8">
+                <a href="/" title="Marble Italia">
+                    <img src="~/Images/logo-marbleitalia_black.png" alt="Marble Italia" />
+                </a>
+                <p>
+                    Contact Us: +44 208 144 9785  or
+                    <a href="mailto:info@mrbitalia.com" title="Contact Marble Italia">
+                        info@mrbitalia.com
+                    </a>
+                </p>
+                <p>&copy; @DateTime.Now.Year All rights reserved. Marble Italia Ltd. Unit 10 Glenthorne Mews - Hammersmith - London, W6 0LJ. Created by <a href="http://www.ivanlitrenta.it/" target="_blank" title="Ivan Li Trenta">Ivan Li Trenta</a></p>
+                <p>@Html.ActionLink("Privacy Policy", "Privacy", "Home")</p>
+            </div>
+            <div class="col-sm-4">
+                <div class="social-footer">
+                    <p>Follow Us:</p>
+                    <a href="https://www.facebook.com/mrbitalia" title="Marble Italia - Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href="https://twitter.com/Marble_Italia" title="Marble Italia - Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/company/marble-italia-ltd" title="Marble Italia - Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    <a href="skype:mrbitaliauk " title="Marble Italia - Skype"><i class="fa fa-skype"></i></a>
+                    <a href="https://plus.google.com/102862187263565659807/posts" title="Marble Italia - GooglePlus" target="_blank"><i class="fa fa-google-plus"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="overlayLoad" style="position:fixed;width:100%;height:100%;top:0;z-index:10000;background-color:#FFF;font-size:60px;text-align:center">
+        <i class="fa fa-circle-o-notch fa-spin" style="position: absolute;top: 50%;margin-top: -30px;left: 50%;margin-left: -30px;"></i>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <script src="~/Scripts/css3-animate-it.js"></script>
+    <script src="~/Scripts/jquery.cycle.all.js"></script>
+
+    <script src="~/Scripts/master.js"></script>
+    @RenderSection("scripts", required: false)
+    
+</body>
+</html>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>http://mrbitalia.com/</loc>
+</url>
+<url>
+  <loc>http://mrbitalia.com/about</loc>
+</url>
+<url>
+  <loc>http://mrbitalia.com/materials/marble</loc>
+</url>
+<url>
+  <loc>http://mrbitalia.com/materials/porphyry</loc>
+</url>
+<url>
+  <loc>http://mrbitalia.com/quarries</loc>
+</url>
+<url>
+  <loc>http://mrbitalia.com/blocks</loc>
+</url>
+<url>
+  <loc>http://mrbitalia.com/slabs</loc>
+</url>
+<url>
+  <loc>http://mrbitalia.com/consultation</loc>
+</url>
+<url>
+  <loc>http://mrbitalia.com/gallery</loc>
+</url>
+<url>
+  <loc>http://mrbitalia.com/contact</loc>
+</url>
+<url>
+  <loc>http://mrbitalia.com/quote</loc>
+</url>
+<url>
+  <loc>http://mrbitalia.com/privacy</loc>
+</url>
+</urlset>

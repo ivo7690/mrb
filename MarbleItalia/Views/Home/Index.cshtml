@@ -1,0 +1,342 @@
+﻿@{
+    ViewBag.Title = "Quarry owner, Marble suppliers London";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+@section Meta{
+    <meta name="description" content="Marble Italia Ltd is a London based supplier of bespoke natural stone for commercial and residential projects. We are specialized in Carrara marble and Botticino marble: tiles for flooring or wall coverings, kitchen top, staircase, vanity top and more." />
+    <meta name="google-site-verification" content="ITN2YGxVdruJt8MfyyA9dL9Dxg4cthp8CgrWjoN43UM" />
+    <style>
+        .item-slide img {
+          /* Set rules to fill background */
+          min-height: 100%;
+          min-width: 1024px;
+	
+          /* Set up proportionate scaling */
+          width: 100%;
+          height: auto;
+	
+          /* Set up positioning */
+          position: fixed;
+          top: 0;
+          left: 0;
+        }
+
+        @@media screen and (max-width: 1024px) { /* Specific to this particular image */
+            .item-slide img {
+            left: 50%;
+            margin-left: -512px;   /* 50% */
+            }
+        }
+    </style>
+}
+
+@section Header{
+    <div id="myCarousel" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="item-slide">
+                <img src="/Images/slide/quarries.jpg" />
+            </div>
+            <div class="item-slide">
+                <img src="/Images/slide/slabs.jpg" />
+            </div>
+            <div class="item-slide">
+                <img src="/Images/slide/hotel.jpg" />
+            </div>
+            <div class="item-slide">
+                <img src="/Images/slide/hall-hotel.jpg" />
+            </div>
+            <div class="item-slide">
+                <img src="/Images/slide/bathroom.jpg" />
+            </div>
+        </div>
+
+        <div class="carousel-indicators">
+        </div>
+        @*<a class="carousel-control left" href="#myCarousel" data-slide="prev"></a>
+            <a class="carousel-control right" href="#myCarousel" data-slide="next"></a>*@
+    </div>
+    <div class="row-fluid ">
+        <div class="carousel-caption text-center animatedParent animateOnce">
+            <h2 class="text-left animated fadeIn">
+                FROM RAW MATERIAL...
+            </h2>
+            <h2 class="text-right animated fadeIn">
+                ...TO FINEST MARBLE
+            </h2>
+        </div>
+    </div>
+    <div class="btn-more">
+        FIND MORE
+    </div>
+}
+<div class="container body-content">
+    <div class="row" style="margin-bottom: -55px; margin-top: 20px;">
+        <div class="col-sm-8 col-sm-offset-2 text-center">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/y-QIxvdFIRA"></iframe>
+            </div>
+        </div>
+    </div>
+    <div id="presentation" class="row step">
+        <div class="col-sm-12" id="desclaimer">
+            <p>
+                Marble Italia Ltd is a London based company: quarry owner and supplier of bespoke natural stone for commercial
+                and residential projects. We are specialized in Carrara marble and Botticino marble:
+                tiles for flooring or wall coverings, kitchen top, staircase, vanity top, skirting board and more.
+            </p>
+            <p>
+                Our prices are the most competitive around, as we source our materials straight from the quarries bypassing the
+                wholesaler/retailer. We offer a wide range of natural stone based on the client’s needs and budget.
+            </p>
+            @*<p>
+                Welcome to Marble Italia, a service created to simplify the process of obtaining marble blocks from quarries all over Italy,
+                as well as moulding them into slabs and finished products for any project.
+            </p>
+            <p>
+                Italian marble is world renowned for its high quality, which has been developed over thousands of years.
+            </p>
+            <p>
+                Through establishing a direct link between raw material providers, marble workers and final clients, we reduce the time and
+                costs imposed by third party retailers.
+            </p>*@
+            <p style="margin-top:20px;">
+                @Html.ActionLink("READ MORE", "About", "Home", null, htmlAttributes: new { @class = "btn btn-readmore" })
+            </p>
+        </div>
+    </div>
+</div>
+<div class="parallax animatedParent animateOnce">
+    <h2 class="text-center animated fadeInDown">
+        Exquisite marble...
+    </h2>
+    <h2 class="text-center animated fadeInDown">
+        ... a charming jewel in the finest taste
+    </h2>
+</div>
+<div class="container body-content">
+    <div class="row text-center">
+        <div class="col-xs-12">
+            <p class="homesubtitle">Flawless marble in three small steps…</p>
+        </div>
+    </div>
+    <hr />
+    <div class="row step animatedParent animateOnce">
+        <div class="col-sm-4 text-center animated fadeIn">
+            <img src="~/Images/marble-quarry.jpg" class="img-circle" alt="marble quarry" />
+        </div>
+        <div class="col-sm-8 animated fadeIn">
+            <h3>Marble quarry</h3>
+            <p>
+                Working with celebrated Italian quarries, we co-operate with technicians and marble quarry owners to source the highest quality natural stone.
+            </p>
+            <p>
+                Once the blocks are mined you can choose to receive the raw material for trading, or send it on to our stoneworkers to be shaped.
+            </p>
+            <p style="margin-top:20px;">
+                @Html.ActionLink("READ MORE", "Quarries", "Home", null, htmlAttributes: new { @class = "btn btn-readmore" })
+            </p>
+        </div>
+    </div>
+    <hr />
+    <div class="row step animatedParent animateOnce">
+        <div class="col-sm-4 text-center pull-right animated fadeIn">
+            <img src="~/Images/manufacturing-process.jpg" class="img-circle" alt="manufacturing process" />
+        </div>
+        <div class="col-sm-8 text-right pull-left animated fadeIn">
+            <h3>Manufacturing process</h3>
+            <p>
+                The process of moulding marble for construction and design is a skill practised by seasoned artisans. Applying years of experience, these craftsmen cut and form blocks into fine slabs or specific shaped products, reflecting the opulence traditionally associated with Italian marble. Popular for interior and exterior building design, our marbles are also a fine investment for trade.
+            </p>
+            <p style="margin-top:20px;">
+                @Html.ActionLink("READ MORE", "Slabs", "Home", null, htmlAttributes: new { @class = "btn btn-readmore" })
+            </p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <hr />
+    <div class="row step animatedParent animateOnce">
+        <div class="col-sm-4 text-center animated fadeIn">
+            <img src="~/Images/finished-marble.jpg" class="img-circle" alt="finished marble" />
+        </div>
+        <div class="col-sm-8 animated fadeIn">
+            <h3>Finished product</h3>
+            <p>
+                Marble and porphyry are versatile materials used by architects and builders in both modern and traditional construction.
+            </p>   <p>
+                In our workshops we can shape the rock for any project, with popular uses including: staircases, bathrooms, flooring, paving, walls, kitchen tops and building facades
+
+            </p>
+            <p style="margin-top:20px;">
+                @Html.ActionLink("READ MORE", "Gallery", "Home", null, htmlAttributes: new { @class = "btn btn-readmore" })
+            </p>
+        </div>
+    </div>
+    <hr />
+</div>
+
+
+@section fatfooter{
+    <div class="container-fluid" style="background-image:url('/Images/slabs-footer.jpg');background-position:center; padding:50px 0">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div>
+                        <p style="font-size:32px;color:#FFF;font-weight:300;border-bottom:1px solid #FFF;padding-left:5px;margin-bottom:20px">Materials</p>
+                        <ul class="pull-left">
+                            <li>Bianco Perlino</li>
+                            <li>Rosa Perlino</li>
+                            <li>Botticino Fiorito</li>
+                            <li>Botticino Classico</li>
+
+                        </ul>
+                        <ul class="pull-left">
+                            <li>Bianco Carrara</li>
+                            <li>Bianco Carrara Gioia</li>
+                            <li>Arabescato</li>
+                            <li>Statuario</li>
+                        </ul>
+                        <ul class="pull-left">
+                            <li>Grigio Carnico</li>
+                            <li>Rosso Asiago</li>
+                            <li>Verde Alpi</li>
+                            <li>Beige Alpi</li>
+                        </ul>
+                        <div class="clearfix"></div>
+                        <a href="/materials/marble" class="btn btn-default pull-right" title="Find more">MORE</a>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div>
+                        <p style="font-size:32px;color:#FFF;font-weight:300;border-bottom:1px solid #FFF;padding-left:5px;margin-bottom:20px">Get a quote</p>
+                        <p style="font-weight:300">Request a quote, we will contact you within 48 hours.</p>
+                        <a href="/quote" class="btn btn-default pull-right" title="Get a quote">GET A QUOTE</a>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <p style="font-size:32px;color:#FFF;font-weight:300;border-bottom:1px solid #FFF;padding-left:5px;margin-bottom:20px">Get in touch</p>
+                    <form id="formContact" action="/contact" method="post">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="nameContact" name="name" placeholder="Enter name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control required" name="mail" id="EmailContact" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="txtMessage" rows="5" class="form-control required" placeholder="Message"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-default pull-right">SEND</button>
+                        <div class="clearfix"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+@section Scripts{
+<div class="modal fade" id="messageSent">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Message sent</h4>
+            </div>
+            <div class="modal-body">
+                <p>Thank you.</p>
+                <p>Your message was sent to our Support Team.<br />
+                You should receive a reply from a representative of our web site by the end of the next business day by email.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div class="modal fade" id="messageError">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Message Error</h4>
+            </div>
+            <div class="modal-body">
+                <p>Sorry.</p>
+                <p>
+                    Something went wrong<br />
+                    Try Again
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+    <script>
+        function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                results = regex.exec(location.search);
+            return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+        $(window).load(function () {
+            $('.carousel-inner').cycle({
+                fx: 'fade',
+                timeout: 4000,
+                speed: 1000,
+                pager: '.carousel-indicators',
+                activePagerClass: 'active',
+                after: function (el, next_el) {
+                    $(next_el).addClass('activeSlide');
+                },
+                before: function (el) {
+                    $(el).removeClass('activeSlide');
+                }
+            });
+        });
+
+        $(function () {
+            var mexSent = getParameterByName('messageSent');
+            if (mexSent == "True" || mexSent == "true") {
+                $('#messageSent').modal('show');
+            }
+            if (mexSent == "False" || mexSent == "false") {
+                $('#messageError').modal('show');
+            }
+
+            $('.btn-more').click(function () {
+                $("body").animate({ scrollTop: $(".body-content").offset().top }, 2000);
+            });
+
+            $('.item-slide').each(function () {
+                $(this).height($(window).height());
+            });
+            $('.carousel-inner').height($(window).height());
+            $('header').height($(window).height());
+        });
+
+        $(window).resize(function () {
+            $('header').height($(window).height());
+            $('.carousel-inner').height($(window).height());
+            $('.item-slide').each(function () {
+                $(this).height($(window).height());
+            });
+        });
+
+        $(window).scroll(function () {
+            if (navigator.userAgent.match(/iPhone/i)) {
+                $('.parallax').css('background-position-y', ((($(window).scrollTop() - ($('.parallax').offset().top - 600)) / 2) * -1));
+            }
+            else if (navigator.userAgent.match(/Android/i)) {
+
+                $('.parallax').css('background-position-y', ((($(window).scrollTop() - ($('.parallax').offset().top - 600)) / 2.5) * -1));
+
+            }else{
+                $('.parallax').css('background-position-y', ((($(window).scrollTop() - ($('.parallax').offset().top - 220)) / 2) * -1));
+            }
+        });
+    </script>
+}

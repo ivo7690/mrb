@@ -1,0 +1,145 @@
+﻿<div class="navbar navbar-fixed-top animatedParent animateOnce">
+    <div class="navbar-social animated fadeInDown">
+        <i class="fa fa-phone"></i> +44 208 144 9785
+
+        <a href="mailto:info@mrbitalia.com" title="Contact Marble Italia">
+            <i class="fa fa-envelope"></i>info@mrbitalia.com
+        </a>
+    </div>
+    <div class="navbar-main animated fadeInDown">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a href="/" title="Marble Italia" class="pull-left">
+                <h1 class="logo-name">Marble Italia</h1>
+                <img src="~/Images/logo-marbleitalia.png" alt="Marble Italia" width="200" />
+            </a>
+        </div>
+        <div class="navbar-collapse collapse navbar-right" id="main-menu">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        About Us
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="item">
+                            <a href="/about">
+                                Who we are
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="/about#what">
+                                What we offer
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        Materials
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="item">
+                            @Html.ActionLink("Marble & Stone", "Marble", "Materials")
+                        </li>
+                        <li class="item">
+                            @Html.ActionLink("Onyx", "Onyx", "Materials")
+                        </li>
+                        <li class="item">
+                            @Html.ActionLink("Travertine", "Travertine", "Materials")
+                        </li>
+                        <li class="item">
+                            @Html.ActionLink("Porphyry", "Porphyry", "Materials")
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        Slabs in stock
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="item">
+                            @Html.ActionLink("Calacatta marble", "Calacatta", "Slabs")
+                        </li>
+                        <li class="item">
+                            @Html.ActionLink("Statuario marble", "Statuario", "Slabs")
+                        </li>
+                        <li class="item">
+                            @Html.ActionLink("Arabescato marble", "Arabescato", "Slabs")
+                        </li>
+                        <li class="item">
+                            @Html.ActionLink("Carrara marble", "Carrara", "Slabs")
+                        </li>
+                        <li class="item">
+                            @Html.ActionLink("Onyx", "Onyx", "Slabs")
+                        </li>
+                        <li class="item">
+                            @Html.ActionLink("All slabs available", "AllAvailable", "Slabs")
+                        </li>
+                    </ul>
+                </li>
+                <li @*class="dropdown"*@>
+                    @Html.ActionLink("Marble Tiles", "Index", "Tiles")
+
+
+                    @*<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        Marble Tiles
+                    </a>*@
+                    @*<ul class="dropdown-menu">
+                        <li class="item">
+                            @Html.ActionLink("Calacatta", "", "")
+                        </li>
+                        <li class="item">
+                            @Html.ActionLink("Statuario", "", "")
+                        </li>
+                        <li class="item">
+                            @Html.ActionLink("Arabescato", "", "")
+                        </li>
+                        <li class="item">
+                            @Html.ActionLink("Carrara", "", "")
+                        </li>
+                        <li class="item">
+                            @Html.ActionLink("Onyx", "", "")
+                        </li>
+                    </ul>*@
+                </li>
+                <li>
+                    @Html.ActionLink("Quarries", "Quarries", "Home")
+                </li>
+                <li>
+                    @Html.ActionLink("Blocks", "Blocks", "Home")
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        Projects
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="item">
+                            @Html.ActionLink("Consultation and planning", "Consultation", "Home")
+                        </li>
+                        <li class="item">
+                            @Html.ActionLink("Gallery", "Gallery", "Home")
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        Contact
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="item">
+                            @Html.ActionLink("Get in touch", "Contact", "Home")
+                        </li>
+                        <li class="item">
+                            @Html.ActionLink("Get a quote", "Quote", "Home")
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,4 @@
+﻿User-agent: *
+Disallow: /privacy
+         
+sitemap: http://mrbitalia.com/sitemap.xml

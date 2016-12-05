@@ -1,0 +1,296 @@
+﻿@{
+    ViewBag.Title = "Gallery";
+}
+@section Meta{
+    <meta name="description" content="Bespoke pieces of marble or porphyry can have a variety of uses including for staircases, bathrooms, kitchens, flooring, living areas and walls." />
+}
+@section Header{
+    <div class="header-content animated fadeInDown">
+        <h2>@ViewBag.Title</h2>
+    </div>
+}
+@section Style{
+    <link href="~/Scripts/fancybox/jquery.fancybox.css" rel="stylesheet" />
+<link href="~/Scripts/fancybox/helpers/jquery.fancybox-thumbs.css" rel="stylesheet" />
+    <link href="~/Scripts/smoothDivScroll/css/smoothDivScroll.css" rel="stylesheet" />
+}
+@section Scripts{
+    <script src="~/Scripts/smoothDivScroll/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="~/Scripts/smoothDivScroll/js/jquery.kinetic.min.js"></script>
+    <script src="~/Scripts/smoothDivScroll/js/jquery.smoothdivscroll-1.3-min.js"></script>
+    <script src="~/Scripts/smoothDivScroll/js/jquery.mousewheel.min.js"></script>
+    <script src="~/Scripts/fancybox/jquery.fancybox.js"></script>
+<script src="~/Scripts/fancybox/helpers/jquery.fancybox-thumbs.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".gallery").fancybox({
+                helpers: {
+                    title: {
+                        type: 'float'
+                    },
+                    thumbs: {
+                        width: 50,
+                        height: 50
+                    }
+                }
+            });
+
+            $(".container-gallery").smoothDivScroll({
+                manualContinuousScrolling: true,
+                autoScrollingMode: "always",
+                autoScrollingInterval: 60,
+                hoverPause: true,
+                autoSpeed: false
+            });
+
+        });
+    </script>
+}
+<p>
+    Bespoke pieces of marble or porphyry can have a variety of uses including for staircases, bathrooms, kitchens, flooring, living areas and walls.
+</p>
+<h3>Bathrooms</h3>
+<div class="container-gallery">
+    <a class="gallery" rel="bathrooms" href="/Images/gallery/bathrooms/bagno-rosa-del-portogallo.jpg">
+        <img src="~/Images/gallery/bathrooms/thumbs/bagno-rosa-del-portogallo.jpg" />
+    </a>
+    <a class="gallery" rel="bathrooms" href="/Images/gallery/bathrooms/bianco-rosso.jpg">
+        <img src="~/Images/gallery/bathrooms/thumbs/bianco-rosso.jpg" />
+    </a>
+    <a class="gallery" rel="bathrooms" href="/Images/gallery/bathrooms/bianco_carrara.jpg">
+        <img src="~/Images/gallery/bathrooms/thumbs/bianco_carrara.jpg" />
+    </a>
+    <a class="gallery" rel="bathrooms" href="/Images/gallery/bathrooms/calacatta_verde_damascato.jpg">
+        <img src="~/Images/gallery/bathrooms/thumbs/calacatta_verde_damascato.jpg" />
+    </a>
+    <a class="gallery" rel="bathrooms" href="/Images/gallery/bathrooms/img435.jpg">
+        <img src="~/Images/gallery/bathrooms/thumbs/img435.jpg" />
+    </a>
+    <a class="gallery" rel="bathrooms" href="/Images/gallery/bathrooms/img460.jpg">
+        <img src="~/Images/gallery/bathrooms/thumbs/img460.jpg" />
+    </a>
+    <a class="gallery" rel="bathrooms" href="/Images/gallery/bathrooms/img461.jpg">
+        <img src="~/Images/gallery/bathrooms/thumbs/img461.jpg" />
+    </a>
+    <a class="gallery" rel="bathrooms" href="/Images/gallery/bathrooms/img462.jpg">
+        <img src="~/Images/gallery/bathrooms/thumbs/img462.jpg" />
+    </a>
+    <a class="gallery" rel="bathrooms" href="/Images/gallery/bathrooms/img463.jpg">
+        <img src="~/Images/gallery/bathrooms/thumbs/img463.jpg" />
+    </a>
+    <a class="gallery" rel="bathrooms" href="/Images/gallery/bathrooms/img464.jpg">
+        <img src="~/Images/gallery/bathrooms/thumbs/img464.jpg" />
+    </a>
+    <a class="gallery" rel="bathrooms" href="/Images/gallery/bathrooms/lavabo-marmo-calacatta.jpg">
+        <img src="~/Images/gallery/bathrooms/thumbs/lavabo-marmo-calacatta.jpg" />
+    </a>
+    <a class="gallery" rel="bathrooms" href="/Images/gallery/bathrooms/lavandino-bagno-biancone.jpg">
+        <img src="~/Images/gallery/bathrooms/thumbs/lavandino-bagno-biancone.jpg" />
+    </a>
+    <a class="gallery" rel="bathrooms" href="/Images/gallery/bathrooms/statuario.jpg">
+        <img src="~/Images/gallery/bathrooms/thumbs/statuario.jpg" />
+    </a>
+</div>
+
+
+<h3>Facades</h3>
+<div class="container-gallery">
+    <a class="gallery" rel="facades" href="/Images/gallery/facades/C_so%20Como%20Milano-01_bassa.jpg">
+        <img src="~/Images/gallery/facades/thumbs/C_so%20Como%20Milano-01_bassa.jpg" />
+    </a>
+    <a class="gallery" rel="facades" href="/Images/gallery/facades/Cantine%20Lavia_01_bassa.jpg">
+        <img src="~/Images/gallery/facades/thumbs/Cantine%20Lavia_01_bassa.jpg" />
+    </a>
+    <a class="gallery" rel="facades" href="/Images/gallery/facades/Cantine%20Lavis_02_bassa.jpg">
+        <img src="~/Images/gallery/facades/thumbs/Cantine%20Lavis_02_bassa.jpg" />
+    </a>
+    <a class="gallery" rel="facades" href="/Images/gallery/facades/EX%20IBM%20Milano_01.jpg">
+        <img src="~/Images/gallery/facades/thumbs/EX%20IBM%20Milano_01.jpg" />
+    </a>
+    <a class="gallery" rel="facades" href="/Images/gallery/facades/EX%20IBM%20Milano_02_bassa.jpg">
+        <img src="~/Images/gallery/facades/thumbs/EX%20IBM%20Milano_02_bassa.jpg" />
+    </a>
+    <a class="gallery" rel="facades" href="/Images/gallery/facades/Maso%20Franch-01_bassa.jpg">
+        <img src="~/Images/gallery/facades/thumbs/Maso%20Franch-01_bassa.jpg" />
+    </a>
+    <a class="gallery" rel="facades" href="/Images/gallery/facades/PARETI-VENTILATE--27.jpg">
+        <img src="~/Images/gallery/facades/thumbs/PARETI-VENTILATE--27.jpg" />
+    </a>
+    <a class="gallery" rel="facades" href="/Images/gallery/facades/rivestimento%20in%20Verdello.jpg">
+        <img src="~/Images/gallery/facades/thumbs/rivestimento%20in%20Verdello.jpg" />
+    </a>
+    <a class="gallery" rel="facades" href="/Images/gallery/facades/Scuola%20Isera-02_bassa.jpg">
+        <img src="~/Images/gallery/facades/thumbs/Scuola%20Isera-02_bassa.jpg" />
+    </a>
+    <a class="gallery" rel="facades" href="/Images/gallery/facades/Teatro%20di%20Canazei_bassa.jpg">
+        <img src="~/Images/gallery/facades/thumbs/Teatro%20di%20Canazei_bassa.jpg" />
+    </a>
+    <a class="gallery" rel="facades" href="/Images/gallery/facades/Teatro%20di%20Meano-01_bassa.jpg">
+        <img src="~/Images/gallery/facades/thumbs/Teatro%20di%20Meano-01_bassa.jpg" />
+    </a>
+    <a class="gallery" rel="facades" href="/Images/gallery/facades/Universita%20di%20TN-01_bassa.jpg">
+        <img src="~/Images/gallery/facades/thumbs/Universita%20di%20TN-01_bassa.jpg" />
+    </a>
+    <a class="gallery" rel="facades" href="/Images/gallery/facades/Universita%20di%20TN-02_bassa.jpg">
+        <img src="~/Images/gallery/facades/thumbs/Universita%20di%20TN-02_bassa.jpg" />
+    </a>
+    <a class="gallery" rel="facades" href="/Images/gallery/facades/Universita%20di%20TN-03_bassa.jpg">
+        <img src="~/Images/gallery/facades/thumbs/Universita%20di%20TN-03_bassa.jpg" />
+    </a>
+</div>
+
+<h3>Fire surrounds</h3>
+<div class="container-gallery">
+    <a class="gallery" rel="firesurrounds" href="/Images/gallery/firesurrounds/c.jpg">
+        <img src="~/Images/gallery/firesurrounds/thumbs/c.jpg" />
+    </a>
+    <a class="gallery" rel="firesurrounds" href="/Images/gallery/firesurrounds/caminetto-4.jpg">
+        <img src="~/Images/gallery/firesurrounds/thumbs/caminetto-4.jpg" />
+    </a>
+    <a class="gallery" rel="firesurrounds" href="/Images/gallery/firesurrounds/caminetto-marmo-multicolor.jpg">
+        <img src="~/Images/gallery/firesurrounds/thumbs/caminetto-marmo-multicolor.jpg" />
+    </a>
+    <a class="gallery" rel="firesurrounds" href="/Images/gallery/firesurrounds/caminetto-panca.jpg">
+        <img src="~/Images/gallery/firesurrounds/thumbs/caminetto-panca.jpg" />
+    </a>
+    <a class="gallery" rel="firesurrounds" href="/Images/gallery/firesurrounds/cornice-caminetto-marmo-bianco.jpg">
+        <img src="~/Images/gallery/firesurrounds/thumbs/cornice-caminetto-marmo-bianco.jpg" />
+    </a>
+    <a class="gallery" rel="firesurrounds" href="/Images/gallery/firesurrounds/img441.jpg">
+        <img src="~/Images/gallery/firesurrounds/thumbs/img441.jpg" />
+    </a>
+    <a class="gallery" rel="firesurrounds" href="/Images/gallery/firesurrounds/img447.jpg">
+        <img src="~/Images/gallery/firesurrounds/thumbs/img447.jpg" />
+    </a>
+    <a class="gallery" rel="firesurrounds" href="/Images/gallery/firesurrounds/img458.jpg">
+        <img src="~/Images/gallery/firesurrounds/thumbs/img458.jpg" />
+    </a>
+    <a class="gallery" rel="firesurrounds" href="/Images/gallery/firesurrounds/img459.jpg">
+        <img src="~/Images/gallery/firesurrounds/thumbs/img459.jpg" />
+    </a>
+</div>
+
+<h3>Flooring</h3>
+<div class="container-gallery">
+    <a class="gallery" rel="flooring" href="/Images/gallery/flooring/Statuario1.jpg">
+        <img src="~/Images/gallery/flooring/thumbs/Statuario1.jpg" />
+    </a>
+    <a class="gallery" rel="flooring" href="/Images/gallery/flooring/Statuario2.jpg">
+        <img src="~/Images/gallery/flooring/thumbs/Statuario2.jpg" />
+    </a>
+    <a class="gallery" rel="flooring" href="/Images/gallery/flooring/Statuario3.jpg">
+        <img src="~/Images/gallery/flooring/thumbs/Statuario3.jpg" />
+    </a>
+    <a class="gallery" rel="flooring" href="/Images/gallery/flooring/Statuario4.jpg">
+        <img src="~/Images/gallery/flooring/thumbs/Statuario4.jpg" />
+    </a>
+    <a class="gallery" rel="flooring" href="/Images/gallery/flooring/pav_%20in%20marmo%20bianco.jpg">
+        <img src="~/Images/gallery/flooring/thumbs/pav_%20in%20marmo%20bianco.jpg" />
+    </a>
+    <a class="gallery" rel="flooring" href="/Images/gallery/flooring/pav_%20in%20marmo%20multicolor%20-spazzolato.jpg">
+        <img src="~/Images/gallery/flooring/thumbs/pav_%20in%20marmo%20multicolor%20-spazzolato.jpg" />
+    </a>
+    <a class="gallery" rel="flooring" href="/Images/gallery/flooring/pav_%20marmo%20bianco%20rosso%20nero%20con%20decoro%20lucido.jpg">
+        <img src="~/Images/gallery/flooring/thumbs/pav_%20marmo%20bianco%20rosso%20nero%20con%20decoro%20lucido.jpg" />
+    </a>
+    <a class="gallery" rel="flooring" href="/Images/gallery/flooring/pav_%20marmo%20bianco,%20rosso%20e%20nero%20margnina%20con%20decori%20lucidi.jpg">
+        <img src="~/Images/gallery/flooring/thumbs/pav_%20marmo%20bianco,%20rosso%20e%20nero%20margnina%20con%20decori%20lucidi.jpg" />
+    </a>
+    <a class="gallery" rel="flooring" href="/Images/gallery/flooring/pav_%20marmo%20multicolor%20rosa-bianco%20lucido.jpg">
+        <img src="~/Images/gallery/flooring/thumbs/pav_%20marmo%20multicolor%20rosa-bianco%20lucido.jpg" />
+    </a>
+    <a class="gallery" rel="flooring" href="/Images/gallery/flooring/pavimentazione%20in%20marmo%20multicolor%20spazzolato%20con%20decoro.jpg">
+        <img src="~/Images/gallery/flooring/thumbs/pavimentazione%20in%20marmo%20multicolor%20spazzolato%20con%20decoro.jpg" />
+    </a>
+    <a class="gallery" rel="flooring" href="/Images/gallery/flooring/pavimento%20in%20marmo%20bianco=rosso%20lucido.jpg">
+        <img src="~/Images/gallery/flooring/thumbs/pavimento%20in%20marmo%20bianco=rosso%20lucido.jpg" />
+    </a>
+    <a class="gallery" rel="flooring" href="/Images/gallery/flooring/pavimento%20in%20marmo%20multicolor%20con%20decoro%20rosa%20spazzolato.jpg">
+        <img src="~/Images/gallery/flooring/thumbs/pavimento%20in%20marmo%20multicolor%20con%20decoro%20rosa%20spazzolato.jpg" />
+    </a>
+    <a class="gallery" rel="flooring" href="/Images/gallery/flooring/pavimento%20ufficio%20in%20marmo%20multicolor.jpg">
+        <img src="~/Images/gallery/flooring/thumbs/pavimento%20ufficio%20in%20marmo%20multicolor.jpg" />
+    </a>
+</div>
+
+<h3>Kitchens</h3>
+<div class="container-gallery">
+    <a class="gallery" rel="kitchens" href="/Images/gallery/kitchen/Carrara-Bianco.JPG"><img src="~/Images/gallery/kitchen/thumbs/Carrara-Bianco.JPG" /></a>
+    <a class="gallery" rel="kitchens" href="/Images/gallery/kitchen/img452.JPG"><img src="~/Images/gallery/kitchen/thumbs/img452.JPG" /></a>
+    <a class="gallery" rel="kitchens" href="/Images/gallery/kitchen/kitchen.JPG"><img src="~/Images/gallery/kitchen/thumbs/kitchen.JPG" /></a>
+    <a class="gallery" rel="kitchens" href="/Images/gallery/kitchen/carrara-kitchen.jpg"><img src="~/Images/gallery/kitchen/thumbs/carrara-kitchen.jpg" /></a>
+    <a class="gallery" rel="kitchens" href="/Images/gallery/kitchen/kitchen2.JPG"><img src="~/Images/gallery/kitchen/thumbs/kitchen2.JPG" /></a>
+    <a class="gallery" rel="kitchens" href="/Images/gallery/kitchen/lavello%20cucina%20in%20biancone.JPG"><img src="~/Images/gallery/kitchen/thumbs/lavello%20cucina%20in%20biancone.JPG" /></a>
+    <a class="gallery" rel="kitchens" href="/Images/gallery/kitchen/piano%20cucina%20in%20marmo%20a%20massello%201%20vasca%20multicolor%20lucido.JPG"><img src="~/Images/gallery/kitchen/thumbs/piano%20cucina%20in%20marmo%20a%20massello%201%20vasca%20multicolor%20lucido.JPG" /></a>
+</div>
+
+<h3>Outdoor</h3>
+<div class="container-gallery">
+    <a class="gallery" rel="outdoor" href="/Images/gallery/outdoor/coperchio%20tavolo%20in%20marmo%20rosa%20lucido.JPG"><img src="~/Images/gallery/outdoor/thumbs/coperchio%20tavolo%20in%20marmo%20rosa%20lucido.JPG" /></a>
+    <a class="gallery" rel="outdoor" href="/Images/gallery/outdoor/coperchio%20tavolo%20in%20multicolor%20spazzolato.JPG"><img src="~/Images/gallery/outdoor/thumbs/coperchio%20tavolo%20in%20multicolor%20spazzolato.JPG" /></a>
+    <a class="gallery" rel="outdoor" href="/Images/gallery/outdoor/Fontana%20di%20Mori2.JPG"><img src="~/Images/gallery/outdoor/thumbs/Fontana%20di%20Mori2.JPG" /></a>
+    <a class="gallery" rel="outdoor" href="/Images/gallery/outdoor/Fontana%20di%20Mori3.JPG"><img src="~/Images/gallery/outdoor/thumbs/Fontana%20di%20Mori3.JPG" /></a>
+    <a class="gallery" rel="outdoor" href="/Images/gallery/outdoor/fontanella%20in%20Verdello2.JPG"><img src="~/Images/gallery/outdoor/thumbs/fontanella%20in%20Verdello2.JPG" /></a>
+    <a class="gallery" rel="outdoor" href="/Images/gallery/outdoor/img430.JPG"><img src="~/Images/gallery/outdoor/thumbs/img430.JPG" /></a>
+    <a class="gallery" rel="outdoor" href="/Images/gallery/outdoor/img433.JPG"><img src="~/Images/gallery/outdoor/thumbs/img433.JPG" /></a>
+    <a class="gallery" rel="outdoor" href="/Images/gallery/outdoor/marmo%20rubbio%20multicolor.JPG"><img src="~/Images/gallery/outdoor/thumbs/marmo%20rubbio%20multicolor.JPG" /></a>
+    <a class="gallery" rel="outdoor" href="/Images/gallery/outdoor/panca%20in%20marmo%20calacatta.JPG"><img src="~/Images/gallery/outdoor/thumbs/panca%20in%20marmo%20calacatta.JPG" /></a>
+    <a class="gallery" rel="outdoor" href="/Images/gallery/outdoor/portafiori%20marmo%20multicolor.JPG"><img src="~/Images/gallery/outdoor/thumbs/portafiori%20marmo%20multicolor.JPG" /></a>
+    <a class="gallery" rel="outdoor" href="/Images/gallery/outdoor/rubbio%20multicolor%202.JPG"><img src="~/Images/gallery/outdoor/thumbs/rubbio%20multicolor%202.JPG" /></a>
+    <a class="gallery" rel="outdoor" href="/Images/gallery/outdoor/tavolo%20e%20panca%20per%20esterno%20in%20marmo%20multicolor%20spazzolato.JPG"><img src="~/Images/gallery/outdoor/thumbs/tavolo%20e%20panca%20per%20esterno%20in%20marmo%20multicolor%20spazzolato.JPG" /></a>
+    <a class="gallery" rel="outdoor" href="/Images/gallery/outdoor/tavolo%20in%20marmo%20bianco.JPG"><img src="~/Images/gallery/outdoor/thumbs/tavolo%20in%20marmo%20bianco.JPG" /></a>
+</div>
+
+<h3>Marble paving</h3>
+<div class="container-gallery">
+    <a class="gallery" rel="paving" href="/Images/gallery/pavingmarble/pav%20per%20esterno%20in%20marmo%20rosso%20e%20multicolor%20spazzolato.JPG"><img src="~/Images/gallery/pavingmarble/thumbs/pav%20per%20esterno%20in%20marmo%20rosso%20e%20multicolor%20spazzolato.JPG" /></a>
+    <a class="gallery" rel="paving" href="/Images/gallery/pavingmarble/pav_%20per%20esterno%20in%20rosso%20e%20multicolor%20bocciardato.JPG"><img src="~/Images/gallery/pavingmarble/thumbs/pav_%20per%20esterno%20in%20rosso%20e%20multicolor%20bocciardato.JPG" /></a>
+    <a class="gallery" rel="paving" href="/Images/gallery/pavingmarble/pavimento%20e%20rivestimento%20in%20marmo%20rosso%20e%20multicolor%20bocciardato%20fine.JPG"><img src="~/Images/gallery/pavingmarble/thumbs/pavimento%20e%20rivestimento%20in%20marmo%20rosso%20e%20multicolor%20bocciardato%20fine.JPG" /></a>
+    <a class="gallery" rel="paving" href="/Images/gallery/pavingmarble/pavimento%20esterno%20in%20marmo%20multicolor%20bocciardato.JPG"><img src="~/Images/gallery/pavingmarble/thumbs/pavimento%20esterno%20in%20marmo%20multicolor%20bocciardato.JPG" /></a>
+    <a class="gallery" rel="paving" href="/Images/gallery/pavingmarble/pavimento%20in%20marmo%20multicolor%20spazzolato.JPG"><img src="~/Images/gallery/pavingmarble/thumbs/pavimento%20in%20marmo%20multicolor%20spazzolato.JPG" /></a>
+    <a class="gallery" rel="paving" href="/Images/gallery/pavingmarble/pavimento%20marmo%20rosso.JPG"><img src="~/Images/gallery/pavingmarble/thumbs/pavimento%20marmo%20rosso.JPG" /></a>
+    <a class="gallery" rel="paving" href="/Images/gallery/pavingmarble/terrazzo%20in%20marmo-multicolor%20bocciardato.JPG"><img src="~/Images/gallery/pavingmarble/thumbs/terrazzo%20in%20marmo-multicolor%20bocciardato.JPG" /></a>
+</div>
+
+<h3 id="porphyry">Porphyry paving and setts</h3>
+<div class="container-gallery">
+    <a class="gallery" rel="porphyry" href="/Images/gallery/porphyry/1%20COSTE%20SEGATE.JPG"><img src="~/Images/gallery/porphyry/thumbs/1%20COSTE%20SEGATE.JPG" /></a>
+    <a class="gallery" rel="porphyry" href="/Images/gallery/porphyry/1%20COSTE%20SPACCO.JPG"><img src="~/Images/gallery/porphyry/thumbs/1%20COSTE%20SPACCO.JPG" /></a>
+    <a class="gallery" rel="porphyry" href="/Images/gallery/porphyry/1%20CUBETTI.JPG"><img src="~/Images/gallery/porphyry/thumbs/1%20CUBETTI.JPG" /></a>
+    <a class="gallery" rel="porphyry" href="/Images/gallery/porphyry/2%20COSTE%20SEGATE.JPG"><img src="~/Images/gallery/porphyry/thumbs/2%20COSTE%20SEGATE.JPG" /></a>
+    <a class="gallery" rel="porphyry" href="/Images/gallery/porphyry/2%20CUBETTI-.JPG"><img src="~/Images/gallery/porphyry/thumbs/2%20CUBETTI-.JPG" /></a>
+    <a class="gallery" rel="porphyry" href="/Images/gallery/porphyry/2COSTE%20SPACCO.JPG"><img src="~/Images/gallery/porphyry/thumbs/2COSTE%20SPACCO.JPG" /></a>
+    <a class="gallery" rel="porphyry" href="/Images/gallery/porphyry/3%20CUBETTI.JPG"><img src="~/Images/gallery/porphyry/thumbs/3%20CUBETTI.JPG" /></a>
+    <a class="gallery" rel="porphyry" href="/Images/gallery/porphyry/4%20CUBETTI.JPG"><img src="~/Images/gallery/porphyry/thumbs/4%20CUBETTI.JPG" /></a>
+    <a class="gallery" rel="porphyry" href="/Images/gallery/porphyry/CUBETTI-SCHEDA-TECNICA-5.JPG"><img src="~/Images/gallery/porphyry/thumbs/CUBETTI-SCHEDA-TECNICA-5.JPG" /></a>
+    <a class="gallery" rel="porphyry" href="/Images/gallery/porphyry/CUBETTI-SCHEDA-TECNICA-7.JPG"><img src="~/Images/gallery/porphyry/thumbs/CUBETTI-SCHEDA-TECNICA-7.JPG" /></a>
+    <a class="gallery" rel="porphyry" href="/Images/gallery/porphyry/CUBETTI-SCHEDA-TECNICA-8.JPG"><img src="~/Images/gallery/porphyry/thumbs/CUBETTI-SCHEDA-TECNICA-8.JPG" /></a>
+    <a class="gallery" rel="porphyry" href="/Images/gallery/porphyry/PIASTRELLE-PIANO-CAVA-SCHEDA-TEC-3.JPG"><img src="~/Images/gallery/porphyry/thumbs/PIASTRELLE-PIANO-CAVA-SCHEDA-TEC-3.JPG" /></a>
+    <a class="gallery" rel="porphyry" href="/Images/gallery/porphyry/PIASTRELLE-PIANO-CAVA-SCHEDA-TEC-7.JPG"><img src="~/Images/gallery/porphyry/thumbs/PIASTRELLE-PIANO-CAVA-SCHEDA-TEC-7.JPG" /></a>
+    <a class="gallery" rel="porphyry" href="/Images/gallery/porphyry/PIASTRELLE-PIANO-CAVA-SCHEDA-TEC-8.JPG"><img src="~/Images/gallery/porphyry/thumbs/PIASTRELLE-PIANO-CAVA-SCHEDA-TEC-8.JPG" /></a>
+    <a class="gallery" rel="porphyry" href="/Images/gallery/porphyry/PIASTRELLE-PIANO-LAVORATO-1.JPG"><img src="~/Images/gallery/porphyry/thumbs/PIASTRELLE-PIANO-LAVORATO-1.JPG" /></a>
+    <a class="gallery" rel="porphyry" href="/Images/gallery/porphyry/PIASTRELLE-PIANO-LAVORATO-6.JPG"><img src="~/Images/gallery/porphyry/thumbs/PIASTRELLE-PIANO-LAVORATO-6.JPG" /></a>
+    <a class="gallery" rel="porphyry" href="/Images/gallery/porphyry/polished%20porphyry.JPG"><img src="~/Images/gallery/porphyry/thumbs/polished%20porphyry.JPG" /></a>
+    <a class="gallery" rel="porphyry" href="/Images/gallery/porphyry/semi%20polished%20italian%20porphyry.JPG"><img src="~/Images/gallery/porphyry/thumbs/semi%20polished%20italian%20porphyry.JPG" /></a>
+</div>
+
+<h3>Staircases</h3>
+<div class="container-gallery">
+    <a class="gallery" rel="staircases" href="/Images/gallery/staircases/img448.JPG"><img src="~/Images/gallery/staircases/thumbs/img448.JPG" /></a>
+    <a class="gallery" rel="staircases" href="/Images/gallery/staircases/particlare%20di%20scala%20in%20marmo%20multicolor%20spazzolato.JPG"><img src="~/Images/gallery/staircases/thumbs/particlare%20di%20scala%20in%20marmo%20multicolor%20spazzolato.JPG" /></a>
+    <a class="gallery" rel="staircases" href="/Images/gallery/staircases/pav_%20e%20scala%20in%20marmo%20multicolor.JPG"><img src="~/Images/gallery/staircases/thumbs/pav_%20e%20scala%20in%20marmo%20multicolor.JPG" /></a>
+    <a class="gallery" rel="staircases" href="/Images/gallery/staircases/pavimento%20e%20scala%20a%20massello%20sospesa%20in%20marmo%20multicolor%20con%20decoro.JPG"><img src="~/Images/gallery/staircases/thumbs/pavimento%20e%20scala%20a%20massello%20sospesa%20in%20marmo%20multicolor%20con%20decoro.JPG" /></a>
+    <a class="gallery" rel="staircases" href="/Images/gallery/staircases/pavimento%20e%20scala%20in%20marmo%20bianco%20rosa.JPG"><img src="~/Images/gallery/staircases/thumbs/pavimento%20e%20scala%20in%20marmo%20bianco%20rosa.JPG" /></a>
+    <a class="gallery" rel="staircases" href="/Images/gallery/staircases/pavimento%20im%20marmo%20rosso%20lucido.JPG"><img src="~/Images/gallery/staircases/thumbs/pavimento%20im%20marmo%20rosso%20lucido.JPG" /></a>
+    <a class="gallery" rel="staircases" href="/Images/gallery/staircases/scala%20e%20pavimento%20in%20marmo%20bianco%20e%20rosa%20lucido.JPG"><img src="~/Images/gallery/staircases/thumbs/scala%20e%20pavimento%20in%20marmo%20bianco%20e%20rosa%20lucido.JPG" /></a>
+    <a class="gallery" rel="staircases" href="/Images/gallery/staircases/scala%20e%20pavimento%20in%20rosa%20lucido.JPG"><img src="~/Images/gallery/staircases/thumbs/scala%20e%20pavimento%20in%20rosa%20lucido.JPG" /></a>
+    <a class="gallery" rel="staircases" href="/Images/gallery/staircases/scala%20e%20rivestimento%20in%20marmo%20multicolor%20bocciardato%20fine.JPG"><img src="~/Images/gallery/staircases/thumbs/scala%20e%20rivestimento%20in%20marmo%20multicolor%20bocciardato%20fine.JPG" /></a>
+    <a class="gallery" rel="staircases" href="/Images/gallery/staircases/scala%20in%20marmo%20a%20massello%20multicolor%20bocciardato.JPG"><img src="~/Images/gallery/staircases/thumbs/scala%20in%20marmo%20a%20massello%20multicolor%20bocciardato.JPG" /></a>
+    <a class="gallery" rel="staircases" href="/Images/gallery/staircases/scala%20in%20marmo%20bianco.JPG"><img src="~/Images/gallery/staircases/thumbs/scala%20in%20marmo%20bianco.JPG" /></a>
+    <a class="gallery" rel="staircases" href="/Images/gallery/staircases/scala%20in%20marmo%20multicolor%20a%20massello.JPG"><img src="~/Images/gallery/staircases/thumbs/scala%20in%20marmo%20multicolor%20a%20massello.JPG" /></a>
+    <a class="gallery" rel="staircases" href="/Images/gallery/staircases/scala%20in%20marmo%20rosa%20lucido.JPG"><img src="~/Images/gallery/staircases/thumbs/scala%20in%20marmo%20rosa%20lucido.JPG" /></a>
+    <a class="gallery" rel="staircases" href="/Images/gallery/staircases/scala%20m_%20bianco.JPG"><img src="~/Images/gallery/staircases/thumbs/scala%20m_%20bianco.JPG" /></a>
+    <a class="gallery" rel="staircases" href="/Images/gallery/staircases/scala%20sospesa%20in%20marmo%20massello%20multicolor%20spazzolato.JPG"><img src="~/Images/gallery/staircases/thumbs/scala%20sospesa%20in%20marmo%20massello%20multicolor%20spazzolato.JPG" /></a>
+    <a class="gallery" rel="staircases" href="/Images/gallery/staircases/scala%20sospesa%20in%20marmo%20masselo%20multicolor%20spazzolato%202.JPG"><img src="~/Images/gallery/staircases/thumbs/scala%20sospesa%20in%20marmo%20masselo%20multicolor%20spazzolato%202.JPG" /></a>
+    <a class="gallery" rel="staircases" href="/Images/gallery/staircases/scala%20sospesa%20in%20marmo%20rosso%20a%20massello.JPG"><img src="~/Images/gallery/staircases/thumbs/scala%20sospesa%20in%20marmo%20rosso%20a%20massello.JPG" /></a>
+</div>

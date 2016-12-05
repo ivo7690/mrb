@@ -1,0 +1,748 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FE02CD9F-35C1-4E8E-9384-9B1C4CAA7F92}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MarbleItalia</RootNamespace>
+    <AssemblyName>MarbleItalia</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.1.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.1.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.1.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.2.1.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.2.1.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.2.1.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.2.1.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\SlabsController.cs" />
+    <Compile Include="Controllers\MaterialsController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TilesController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetQuoteModel.cs" />
+    <Compile Include="Models\AccountViewModels.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\IdentityModels.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\ManageViewModels.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Master.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Master.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\100percentdesign_horizontal.jpg" />
+    <Content Include="Images\100percentdesign_vertical.jpg" />
+    <Content Include="Images\marble\azul-macaubas.jpg" />
+    <Content Include="Images\marble\bardiglio-imperiale.jpg" />
+    <Content Include="Images\marble\bardiglio-nuvolato.jpg" />
+    <Content Include="Images\marble\beige-alpi-c.jpg" />
+    <Content Include="Images\marble\beige-alpi-d.jpg" />
+    <Content Include="Images\marble\bianco-carrara-c.jpg" />
+    <Content Include="Images\marble\bianco-carrara-cd.jpg" />
+    <Content Include="Images\marble\calacatta-extra.jpg" />
+    <Content Include="Images\marble\emperador-dark.jpg" />
+    <Content Include="Images\marble\Emperador-Light.jpg" />
+    <Content Include="Images\marble\foussana-grey.jpg" />
+    <Content Include="Images\marble\galala.jpg" />
+    <Content Include="Images\marble\green-guatemala.jpg" />
+    <Content Include="Images\marble\negro-marquina.jpg" />
+    <Content Include="Images\marble\new\_0000_riace-bronze.jpg" />
+    <Content Include="Images\marble\new\_0001_palissandro-bluette.jpg" />
+    <Content Include="Images\marble\new\_0002_ombra-Caravaggio .jpg" />
+    <Content Include="Images\marble\new\_0003_noir-gioia .jpg" />
+    <Content Include="Images\marble\new\_0004_GRIGIO_FIOR_DI_BOSCO.jpg" />
+    <Content Include="Images\marble\new\_0005_grigio-orobico.jpg" />
+    <Content Include="Images\marble\new\_0006_Cremo-Delicato.jpg" />
+    <Content Include="Images\marble\new\_0007_CALACATTA_BORGHINI.jpg" />
+    <Content Include="Images\marble\new\_0008_Calacatta-Vagli.jpg" />
+    <Content Include="Images\marble\new\_0009_calacatta-gold.jpg" />
+    <Content Include="Images\marble\new\_0010_Brown-coffee.jpg" />
+    <Content Include="Images\marble\new\_0011_Blue-Calcite.jpg" />
+    <Content Include="Images\marble\new\_0012_blackwood .jpg" />
+    <Content Include="Images\marble\new\_0013_Bianco-Apuano.jpg" />
+    <Content Include="Images\marble\new\_0014_Azul-Boquira.jpg" />
+    <Content Include="Images\marble\new\_0015_Arabescato-corchia.jpg" />
+    <Content Include="Images\marble\new\_0016_striato-olimpico.jpg" />
+    <Content Include="Images\marble\new\_0017_Statuario-Extra.jpg" />
+    <Content Include="Images\marble\new\_0018_statuarietto.jpg" />
+    <Content Include="Images\marble\new\_0019_sodalite_blue.jpg" />
+    <Content Include="Images\marble\new\_0020_ROSA_PORTOGALLO.jpg" />
+    <Content Include="Images\marble\noir-saint-laurent.jpg" />
+    <Content Include="Images\marble\pietra-grey.jpg" />
+    <Content Include="Images\marble\rojo-alicante.jpg" />
+    <Content Include="Images\marble\silvia.jpg" />
+    <Content Include="Images\marble\statuarietto.jpg" />
+    <Content Include="Images\marble\statuario-venato.jpg" />
+    <Content Include="Images\marble\sunny.jpg" />
+    <Content Include="Images\marble\thala-beige.jpg" />
+    <Content Include="Images\marble\thassos.jpg" />
+    <Content Include="Images\marble\top-quality-arabescato.jpg" />
+    <Content Include="Images\marble\top-quality-calacatta.jpg" />
+    <Content Include="Images\marble\travertino-silver.jpg" />
+    <Content Include="Images\marble\travertino-tiziano.jpg" />
+    <Content Include="Images\marble\triesta.jpg" />
+    <Content Include="Images\onyx\bianco-onyx-supreme.jpg" />
+    <Content Include="Images\onyx\blue-onyx.jpg" />
+    <Content Include="Images\onyx\cappuccino-onyx.jpg" />
+    <Content Include="Images\onyx\green-onyx.jpg" />
+    <Content Include="Images\onyx\grey-onyx.jpg" />
+    <Content Include="Images\onyx\onyx-miele.jpg" />
+    <Content Include="Images\onyx\onyx-vanilla.jpg" />
+    <Content Include="Images\onyx\orange-onyx.jpg" />
+    <Content Include="Images\onyx\pink-onyx.jpg" />
+    <Content Include="Images\onyx\red-onyx.jpg" />
+    <Content Include="Images\onyx\white-gold-vein-onyx.jpg" />
+    <Content Include="Images\onyx\white-onyx.jpg" />
+    <Content Include="TemplateMail.html" />
+    <Content Include="googlea77b1b3cb7020df6.html" />
+    <Content Include="Images\gallery\kitchen\carrara-kitchen.jpg" />
+    <Content Include="Images\gallery\kitchen\thumbs\carrara-kitchen.jpg" />
+    <Content Include="intro.html" />
+    <Content Include="quoteMailTemplate.html" />
+    <Content Include="Content\animations.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\materials.css" />
+    <Content Include="Content\responsive.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="contactfromsite.html" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Images\blocks-2.jpg" />
+    <Content Include="Images\blocks-3.jpg" />
+    <Content Include="Images\blocks-header.jpg" />
+    <Content Include="Images\commongallery\marbleialia_marmo rosso e multicolor bocciardato fine.jpg" />
+    <Content Include="Images\commongallery\marbleitalia_bianco-Covelano.jpg" />
+    <Content Include="Images\commongallery\marbleitalia_CUBETTI.jpg" />
+    <Content Include="Images\commongallery\marbleitalia_Fontana di Mori2.jpg" />
+    <Content Include="Images\commongallery\marbleitalia_img459.jpg" />
+    <Content Include="Images\commongallery\marbleitalia_kitchen2.jpg" />
+    <Content Include="Images\commongallery\marbleitalia_PIASTRELLE-PIANO-CAVA-SCHEDA-TEC-7.jpg" />
+    <Content Include="Images\commongallery\marbleitalia_statuario.jpg" />
+    <Content Include="Images\commongallery\marbleitalia_Statuario4.jpg" />
+    <Content Include="Images\commongallery\marbleitalia_Universita di TN-02_bassa.jpg" />
+    <Content Include="Images\consult.jpg" />
+    <Content Include="Images\consulting-footer.jpg" />
+    <Content Include="Images\create.jpg" />
+    <Content Include="Images\design.jpg" />
+    <Content Include="Images\gallery\bathrooms\bagno-rosa-del-portogallo.jpg" />
+    <Content Include="Images\gallery\bathrooms\bianco-covelano.jpg" />
+    <Content Include="Images\gallery\bathrooms\bianco-covelano2.jpg" />
+    <Content Include="Images\gallery\bathrooms\bianco-rosso.jpg" />
+    <Content Include="Images\gallery\bathrooms\bianco_carrara.jpg" />
+    <Content Include="Images\gallery\bathrooms\calacatta_verde_damascato.jpg" />
+    <Content Include="Images\gallery\bathrooms\img435.jpg" />
+    <Content Include="Images\gallery\bathrooms\img460.jpg" />
+    <Content Include="Images\gallery\bathrooms\img461.jpg" />
+    <Content Include="Images\gallery\bathrooms\img462.jpg" />
+    <Content Include="Images\gallery\bathrooms\img463.jpg" />
+    <Content Include="Images\gallery\bathrooms\img464.jpg" />
+    <Content Include="Images\gallery\bathrooms\lavabo-marmo-calacatta.jpg" />
+    <Content Include="Images\gallery\bathrooms\lavandino-bagno-biancone.jpg" />
+    <Content Include="Images\gallery\bathrooms\statuario.jpg" />
+    <Content Include="Images\gallery\bathrooms\thumbs\bagno-rosa-del-portogallo.jpg" />
+    <Content Include="Images\gallery\bathrooms\thumbs\bianco-covelano.jpg" />
+    <Content Include="Images\gallery\bathrooms\thumbs\bianco-covelano2.jpg" />
+    <Content Include="Images\gallery\bathrooms\thumbs\bianco-rosso.jpg" />
+    <Content Include="Images\gallery\bathrooms\thumbs\bianco_carrara.jpg" />
+    <Content Include="Images\gallery\bathrooms\thumbs\calacatta_verde_damascato.jpg" />
+    <Content Include="Images\gallery\bathrooms\thumbs\img435.jpg" />
+    <Content Include="Images\gallery\bathrooms\thumbs\img460.jpg" />
+    <Content Include="Images\gallery\bathrooms\thumbs\img461.jpg" />
+    <Content Include="Images\gallery\bathrooms\thumbs\img462.jpg" />
+    <Content Include="Images\gallery\bathrooms\thumbs\img463.jpg" />
+    <Content Include="Images\gallery\bathrooms\thumbs\img464.jpg" />
+    <Content Include="Images\gallery\bathrooms\thumbs\lavabo-marmo-calacatta.jpg" />
+    <Content Include="Images\gallery\bathrooms\thumbs\lavandino-bagno-biancone.jpg" />
+    <Content Include="Images\gallery\bathrooms\thumbs\statuario.jpg" />
+    <Content Include="Images\gallery\facades\Cantine Lavia_01_bassa.jpg" />
+    <Content Include="Images\gallery\facades\Cantine Lavis_02_bassa.jpg" />
+    <Content Include="Images\gallery\facades\C_so Como Milano-01_bassa.jpg" />
+    <Content Include="Images\gallery\facades\EX IBM Milano_01.jpg" />
+    <Content Include="Images\gallery\facades\EX IBM Milano_02_bassa.jpg" />
+    <Content Include="Images\gallery\facades\Maso Franch-01_bassa.jpg" />
+    <Content Include="Images\gallery\facades\PARETI-VENTILATE--27.jpg" />
+    <Content Include="Images\gallery\facades\rivestimento in Verdello.jpg" />
+    <Content Include="Images\gallery\facades\Scuola Isera-02_bassa.jpg" />
+    <Content Include="Images\gallery\facades\Teatro di Canazei_bassa.jpg" />
+    <Content Include="Images\gallery\facades\Teatro di Meano-01_bassa.jpg" />
+    <Content Include="Images\gallery\facades\thumbs\Cantine Lavia_01_bassa.jpg" />
+    <Content Include="Images\gallery\facades\thumbs\Cantine Lavis_02_bassa.jpg" />
+    <Content Include="Images\gallery\facades\thumbs\C_so Como Milano-01_bassa.jpg" />
+    <Content Include="Images\gallery\facades\thumbs\EX IBM Milano_01.jpg" />
+    <Content Include="Images\gallery\facades\thumbs\EX IBM Milano_02_bassa.jpg" />
+    <Content Include="Images\gallery\facades\thumbs\Maso Franch-01_bassa.jpg" />
+    <Content Include="Images\gallery\facades\thumbs\PARETI-VENTILATE--27.jpg" />
+    <Content Include="Images\gallery\facades\thumbs\rivestimento in Verdello.jpg" />
+    <Content Include="Images\gallery\facades\thumbs\Scuola Isera-02_bassa.jpg" />
+    <Content Include="Images\gallery\facades\thumbs\Teatro di Canazei_bassa.jpg" />
+    <Content Include="Images\gallery\facades\thumbs\Teatro di Meano-01_bassa.jpg" />
+    <Content Include="Images\gallery\facades\thumbs\Universita di TN-01_bassa.jpg" />
+    <Content Include="Images\gallery\facades\thumbs\Universita di TN-02_bassa.jpg" />
+    <Content Include="Images\gallery\facades\thumbs\Universita di TN-03_bassa.jpg" />
+    <Content Include="Images\gallery\facades\Universita di TN-01_bassa.jpg" />
+    <Content Include="Images\gallery\facades\Universita di TN-02_bassa.jpg" />
+    <Content Include="Images\gallery\facades\Universita di TN-03_bassa.jpg" />
+    <Content Include="Images\gallery\firesurrounds\c.jpg" />
+    <Content Include="Images\gallery\firesurrounds\caminetto-4.jpg" />
+    <Content Include="Images\gallery\firesurrounds\caminetto-marmo-multicolor.jpg" />
+    <Content Include="Images\gallery\firesurrounds\caminetto-panca.jpg" />
+    <Content Include="Images\gallery\firesurrounds\cornice-caminetto-marmo-bianco.jpg" />
+    <Content Include="Images\gallery\firesurrounds\img441.jpg" />
+    <Content Include="Images\gallery\firesurrounds\img447.jpg" />
+    <Content Include="Images\gallery\firesurrounds\img458.jpg" />
+    <Content Include="Images\gallery\firesurrounds\img459.jpg" />
+    <Content Include="Images\gallery\firesurrounds\thumbs\c.jpg" />
+    <Content Include="Images\gallery\firesurrounds\thumbs\caminetto-4.jpg" />
+    <Content Include="Images\gallery\firesurrounds\thumbs\caminetto-marmo-multicolor.jpg" />
+    <Content Include="Images\gallery\firesurrounds\thumbs\caminetto-panca.jpg" />
+    <Content Include="Images\gallery\firesurrounds\thumbs\cornice-caminetto-marmo-bianco.jpg" />
+    <Content Include="Images\gallery\firesurrounds\thumbs\img441.jpg" />
+    <Content Include="Images\gallery\firesurrounds\thumbs\img447.jpg" />
+    <Content Include="Images\gallery\firesurrounds\thumbs\img458.jpg" />
+    <Content Include="Images\gallery\firesurrounds\thumbs\img459.jpg" />
+    <Content Include="Images\gallery\flooring\bianco-covelano.jpg" />
+    <Content Include="Images\gallery\flooring\pavimentazione in marmo multicolor spazzolato con decoro.jpg" />
+    <Content Include="Images\gallery\flooring\pavimento in marmo biancorosso lucido.jpg" />
+    <Content Include="Images\gallery\flooring\pavimento in marmo multicolor con decoro rosa spazzolato.jpg" />
+    <Content Include="Images\gallery\flooring\pavimento ufficio in marmo multicolor.jpg" />
+    <Content Include="Images\gallery\flooring\pav_ in marmo bianco.jpg" />
+    <Content Include="Images\gallery\flooring\pav_ in marmo multicolor -spazzolato.jpg" />
+    <Content Include="Images\gallery\flooring\pav_ marmo bianco rosso nero con decoro lucido.jpg" />
+    <Content Include="Images\gallery\flooring\pav_ marmo bianco, rosso e nero margnina con decori lucidi.jpg" />
+    <Content Include="Images\gallery\flooring\pav_ marmo multicolor rosa-bianco lucido.jpg" />
+    <Content Include="Images\gallery\flooring\Statuario1.jpg" />
+    <Content Include="Images\gallery\flooring\Statuario2.jpg" />
+    <Content Include="Images\gallery\flooring\Statuario3.jpg" />
+    <Content Include="Images\gallery\flooring\Statuario4.jpg" />
+    <Content Include="Images\gallery\flooring\thumbs\bianco-covelano.jpg" />
+    <Content Include="Images\gallery\flooring\thumbs\pavimentazione in marmo multicolor spazzolato con decoro.jpg" />
+    <Content Include="Images\gallery\flooring\thumbs\pavimento in marmo bianco=rosso lucido.jpg" />
+    <Content Include="Images\gallery\flooring\thumbs\pavimento in marmo multicolor con decoro rosa spazzolato.jpg" />
+    <Content Include="Images\gallery\flooring\thumbs\pavimento ufficio in marmo multicolor.jpg" />
+    <Content Include="Images\gallery\flooring\thumbs\pav_ in marmo bianco.jpg" />
+    <Content Include="Images\gallery\flooring\thumbs\pav_ in marmo multicolor -spazzolato.jpg" />
+    <Content Include="Images\gallery\flooring\thumbs\pav_ marmo bianco rosso nero con decoro lucido.jpg" />
+    <Content Include="Images\gallery\flooring\thumbs\pav_ marmo bianco, rosso e nero margnina con decori lucidi.jpg" />
+    <Content Include="Images\gallery\flooring\thumbs\pav_ marmo multicolor rosa-bianco lucido.jpg" />
+    <Content Include="Images\gallery\flooring\thumbs\Statuario1.jpg" />
+    <Content Include="Images\gallery\flooring\thumbs\Statuario2.jpg" />
+    <Content Include="Images\gallery\flooring\thumbs\Statuario3.jpg" />
+    <Content Include="Images\gallery\flooring\thumbs\Statuario4.jpg" />
+    <Content Include="Images\gallery\kitchen\Carrara-Bianco.jpg" />
+    <Content Include="Images\gallery\kitchen\img452.jpg" />
+    <Content Include="Images\gallery\kitchen\kitchen.jpg" />
+    <Content Include="Images\gallery\kitchen\kitchen2.jpg" />
+    <Content Include="Images\gallery\kitchen\lavello cucina in biancone.jpg" />
+    <Content Include="Images\gallery\kitchen\piano cucina in marmo a massello 1 vasca multicolor lucido.jpg" />
+    <Content Include="Images\gallery\kitchen\thumbs\Carrara-Bianco.jpg" />
+    <Content Include="Images\gallery\kitchen\thumbs\img452.jpg" />
+    <Content Include="Images\gallery\kitchen\thumbs\kitchen.jpg" />
+    <Content Include="Images\gallery\kitchen\thumbs\kitchen2.jpg" />
+    <Content Include="Images\gallery\kitchen\thumbs\lavello cucina in biancone.jpg" />
+    <Content Include="Images\gallery\kitchen\thumbs\piano cucina in marmo a massello 1 vasca multicolor lucido.jpg" />
+    <Content Include="Images\gallery\outdoor\coperchio tavolo in marmo rosa lucido.jpg" />
+    <Content Include="Images\gallery\outdoor\coperchio tavolo in multicolor spazzolato.jpg" />
+    <Content Include="Images\gallery\outdoor\Fontana di Mori2.JPG" />
+    <Content Include="Images\gallery\outdoor\Fontana di Mori3.JPG" />
+    <Content Include="Images\gallery\outdoor\fontanella in Verdello2.JPG" />
+    <Content Include="Images\gallery\outdoor\img430.jpg" />
+    <Content Include="Images\gallery\outdoor\img433.jpg" />
+    <Content Include="Images\gallery\outdoor\marmo rubbio multicolor.jpg" />
+    <Content Include="Images\gallery\outdoor\panca in marmo calacatta.jpg" />
+    <Content Include="Images\gallery\outdoor\portafiori marmo multicolor.jpg" />
+    <Content Include="Images\gallery\outdoor\rubbio multicolor 2.jpg" />
+    <Content Include="Images\gallery\outdoor\tavolo e panca per esterno in marmo multicolor spazzolato.jpg" />
+    <Content Include="Images\gallery\outdoor\tavolo in marmo bianco.jpg" />
+    <Content Include="Images\gallery\outdoor\thumbs\coperchio tavolo in marmo rosa lucido.jpg" />
+    <Content Include="Images\gallery\outdoor\thumbs\coperchio tavolo in multicolor spazzolato.jpg" />
+    <Content Include="Images\gallery\outdoor\thumbs\Fontana di Mori2.JPG" />
+    <Content Include="Images\gallery\outdoor\thumbs\Fontana di Mori3.JPG" />
+    <Content Include="Images\gallery\outdoor\thumbs\fontanella in Verdello2.JPG" />
+    <Content Include="Images\gallery\outdoor\thumbs\img430.jpg" />
+    <Content Include="Images\gallery\outdoor\thumbs\img433.jpg" />
+    <Content Include="Images\gallery\outdoor\thumbs\marmo rubbio multicolor.jpg" />
+    <Content Include="Images\gallery\outdoor\thumbs\panca in marmo calacatta.jpg" />
+    <Content Include="Images\gallery\outdoor\thumbs\portafiori marmo multicolor.jpg" />
+    <Content Include="Images\gallery\outdoor\thumbs\rubbio multicolor 2.jpg" />
+    <Content Include="Images\gallery\outdoor\thumbs\tavolo e panca per esterno in marmo multicolor spazzolato.jpg" />
+    <Content Include="Images\gallery\outdoor\thumbs\tavolo in marmo bianco.jpg" />
+    <Content Include="Images\gallery\pavingmarble\pav per esterno in marmo rosso e multicolor spazzolato.jpg" />
+    <Content Include="Images\gallery\pavingmarble\pavimento e rivestimento in marmo rosso e multicolor bocciardato fine.jpg" />
+    <Content Include="Images\gallery\pavingmarble\pavimento esterno in marmo multicolor bocciardato.jpg" />
+    <Content Include="Images\gallery\pavingmarble\pavimento in marmo multicolor spazzolato.jpg" />
+    <Content Include="Images\gallery\pavingmarble\pavimento marmo rosso.jpg" />
+    <Content Include="Images\gallery\pavingmarble\pav_ per esterno in rosso e multicolor bocciardato.jpg" />
+    <Content Include="Images\gallery\pavingmarble\terrazzo in marmo-multicolor bocciardato.jpg" />
+    <Content Include="Images\gallery\pavingmarble\thumbs\pav per esterno in marmo rosso e multicolor spazzolato.jpg" />
+    <Content Include="Images\gallery\pavingmarble\thumbs\pavimento e rivestimento in marmo rosso e multicolor bocciardato fine.jpg" />
+    <Content Include="Images\gallery\pavingmarble\thumbs\pavimento esterno in marmo multicolor bocciardato.jpg" />
+    <Content Include="Images\gallery\pavingmarble\thumbs\pavimento in marmo multicolor spazzolato.jpg" />
+    <Content Include="Images\gallery\pavingmarble\thumbs\pavimento marmo rosso.jpg" />
+    <Content Include="Images\gallery\pavingmarble\thumbs\pav_ per esterno in rosso e multicolor bocciardato.jpg" />
+    <Content Include="Images\gallery\pavingmarble\thumbs\terrazzo in marmo-multicolor bocciardato.jpg" />
+    <Content Include="Images\gallery\porphyry\1 COSTE SEGATE.JPG" />
+    <Content Include="Images\gallery\porphyry\1 COSTE SPACCO.JPG" />
+    <Content Include="Images\gallery\porphyry\1 CUBETTI.jpg" />
+    <Content Include="Images\gallery\porphyry\2 COSTE SEGATE.JPG" />
+    <Content Include="Images\gallery\porphyry\2 CUBETTI-.jpg" />
+    <Content Include="Images\gallery\porphyry\2COSTE SPACCO.jpg" />
+    <Content Include="Images\gallery\porphyry\3 CUBETTI.jpg" />
+    <Content Include="Images\gallery\porphyry\4 CUBETTI.JPG" />
+    <Content Include="Images\gallery\porphyry\CUBETTI-SCHEDA-TECNICA-5.jpg" />
+    <Content Include="Images\gallery\porphyry\CUBETTI-SCHEDA-TECNICA-7.jpg" />
+    <Content Include="Images\gallery\porphyry\CUBETTI-SCHEDA-TECNICA-8.jpg" />
+    <Content Include="Images\gallery\porphyry\PIASTRELLE-PIANO-CAVA-SCHEDA-TEC-3.jpg" />
+    <Content Include="Images\gallery\porphyry\PIASTRELLE-PIANO-CAVA-SCHEDA-TEC-7.jpg" />
+    <Content Include="Images\gallery\porphyry\PIASTRELLE-PIANO-CAVA-SCHEDA-TEC-8.jpg" />
+    <Content Include="Images\gallery\porphyry\PIASTRELLE-PIANO-LAVORATO-1.jpg" />
+    <Content Include="Images\gallery\porphyry\PIASTRELLE-PIANO-LAVORATO-6.jpg" />
+    <Content Include="Images\gallery\porphyry\polished porphyry.JPG" />
+    <Content Include="Images\gallery\porphyry\semi polished italian porphyry.JPG" />
+    <Content Include="Images\gallery\porphyry\thumbs\1 COSTE SEGATE.JPG" />
+    <Content Include="Images\gallery\porphyry\thumbs\1 COSTE SPACCO.JPG" />
+    <Content Include="Images\gallery\porphyry\thumbs\1 CUBETTI.jpg" />
+    <Content Include="Images\gallery\porphyry\thumbs\2 COSTE SEGATE.JPG" />
+    <Content Include="Images\gallery\porphyry\thumbs\2 CUBETTI-.jpg" />
+    <Content Include="Images\gallery\porphyry\thumbs\2COSTE SPACCO.jpg" />
+    <Content Include="Images\gallery\porphyry\thumbs\3 CUBETTI.jpg" />
+    <Content Include="Images\gallery\porphyry\thumbs\4 CUBETTI.JPG" />
+    <Content Include="Images\gallery\porphyry\thumbs\CUBETTI-SCHEDA-TECNICA-5.jpg" />
+    <Content Include="Images\gallery\porphyry\thumbs\CUBETTI-SCHEDA-TECNICA-7.jpg" />
+    <Content Include="Images\gallery\porphyry\thumbs\CUBETTI-SCHEDA-TECNICA-8.jpg" />
+    <Content Include="Images\gallery\porphyry\thumbs\PIASTRELLE-PIANO-CAVA-SCHEDA-TEC-3.jpg" />
+    <Content Include="Images\gallery\porphyry\thumbs\PIASTRELLE-PIANO-CAVA-SCHEDA-TEC-7.jpg" />
+    <Content Include="Images\gallery\porphyry\thumbs\PIASTRELLE-PIANO-CAVA-SCHEDA-TEC-8.jpg" />
+    <Content Include="Images\gallery\porphyry\thumbs\PIASTRELLE-PIANO-LAVORATO-1.jpg" />
+    <Content Include="Images\gallery\porphyry\thumbs\PIASTRELLE-PIANO-LAVORATO-6.jpg" />
+    <Content Include="Images\gallery\porphyry\thumbs\polished porphyry.JPG" />
+    <Content Include="Images\gallery\porphyry\thumbs\semi polished italian porphyry.JPG" />
+    <Content Include="Images\gallery\staircases\bianco-Covelano.jpg" />
+    <Content Include="Images\gallery\staircases\img448.jpg" />
+    <Content Include="Images\gallery\staircases\particlare di scala in marmo multicolor spazzolato.jpg" />
+    <Content Include="Images\gallery\staircases\pavimento e scala a massello sospesa in marmo multicolor con decoro.jpg" />
+    <Content Include="Images\gallery\staircases\pavimento e scala in marmo bianco rosa.jpg" />
+    <Content Include="Images\gallery\staircases\pavimento im marmo rosso lucido.jpg" />
+    <Content Include="Images\gallery\staircases\pav_ e scala in marmo multicolor.jpg" />
+    <Content Include="Images\gallery\staircases\scala e pavimento in marmo bianco e rosa lucido.jpg" />
+    <Content Include="Images\gallery\staircases\scala e pavimento in rosa lucido.jpg" />
+    <Content Include="Images\gallery\staircases\scala e rivestimento in marmo multicolor bocciardato fine.jpg" />
+    <Content Include="Images\gallery\staircases\scala in marmo a massello multicolor bocciardato.jpg" />
+    <Content Include="Images\gallery\staircases\scala in marmo bianco.jpg" />
+    <Content Include="Images\gallery\staircases\scala in marmo multicolor a massello.jpg" />
+    <Content Include="Images\gallery\staircases\scala in marmo rosa lucido.jpg" />
+    <Content Include="Images\gallery\staircases\scala m_ bianco.jpg" />
+    <Content Include="Images\gallery\staircases\scala sospesa in marmo massello multicolor spazzolato.jpg" />
+    <Content Include="Images\gallery\staircases\scala sospesa in marmo masselo multicolor spazzolato 2.jpg" />
+    <Content Include="Images\gallery\staircases\scala sospesa in marmo rosso a massello.jpg" />
+    <Content Include="Images\gallery\staircases\thumbs\bianco-Covelano.jpg" />
+    <Content Include="Images\gallery\staircases\thumbs\img448.jpg" />
+    <Content Include="Images\gallery\staircases\thumbs\particlare di scala in marmo multicolor spazzolato.jpg" />
+    <Content Include="Images\gallery\staircases\thumbs\pavimento e scala a massello sospesa in marmo multicolor con decoro.jpg" />
+    <Content Include="Images\gallery\staircases\thumbs\pavimento e scala in marmo bianco rosa.jpg" />
+    <Content Include="Images\gallery\staircases\thumbs\pavimento im marmo rosso lucido.jpg" />
+    <Content Include="Images\gallery\staircases\thumbs\pav_ e scala in marmo multicolor.jpg" />
+    <Content Include="Images\gallery\staircases\thumbs\scala e pavimento in marmo bianco e rosa lucido.jpg" />
+    <Content Include="Images\gallery\staircases\thumbs\scala e pavimento in rosa lucido.jpg" />
+    <Content Include="Images\gallery\staircases\thumbs\scala e rivestimento in marmo multicolor bocciardato fine.jpg" />
+    <Content Include="Images\gallery\staircases\thumbs\scala in marmo a massello multicolor bocciardato.jpg" />
+    <Content Include="Images\gallery\staircases\thumbs\scala in marmo bianco.jpg" />
+    <Content Include="Images\gallery\staircases\thumbs\scala in marmo multicolor a massello.jpg" />
+    <Content Include="Images\gallery\staircases\thumbs\scala in marmo rosa lucido.jpg" />
+    <Content Include="Images\gallery\staircases\thumbs\scala m_ bianco.jpg" />
+    <Content Include="Images\gallery\staircases\thumbs\scala sospesa in marmo massello multicolor spazzolato.jpg" />
+    <Content Include="Images\gallery\staircases\thumbs\scala sospesa in marmo masselo multicolor spazzolato 2.jpg" />
+    <Content Include="Images\gallery\staircases\thumbs\scala sospesa in marmo rosso a massello.jpg" />
+    <Content Include="Images\marble-quarry.jpg" />
+    <Content Include="Images\manufacturing-process.jpg" />
+    <Content Include="Images\finished-marble.jpg" />
+    <Content Include="Images\bg-grigiocarnico.jpg" />
+    <Content Include="Images\blocks-title.jpg" />
+    <Content Include="Images\blocks.jpg" />
+    <Content Include="Images\consulting.jpg" />
+    <Content Include="Images\logo-marbleitalia.png" />
+    <Content Include="Images\logo-marbleitalia_black.png" />
+    <Content Include="Images\map-marker-32.png" />
+    <Content Include="Images\marble\arabescato.jpg" />
+    <Content Include="Images\marble\bianco-covelano-silvergold.jpg" />
+    <Content Include="Images\marble\bianco-covelano-vena-oro.jpg" />
+    <Content Include="Images\marble\bianco-covelano-venosta.jpg" />
+    <Content Include="Images\marble\bianco-perlino.jpg" />
+    <Content Include="Images\marble\bianco-zandobbio.jpg" />
+    <Content Include="Images\marble\biancone.jpg" />
+    <Content Include="Images\marble\bianco_perlino_big.jpg" />
+    <Content Include="Images\marble\botticino-classico.jpg" />
+    <Content Include="Images\marble\botticino-fiorito.jpg" />
+    <Content Include="Images\marble\calacatta.jpg" />
+    <Content Include="Images\marble\carrara-bianco-gioia.jpg" />
+    <Content Include="Images\marble\giallo-atlantide.jpg" />
+    <Content Include="Images\marble\giallo-reale.jpg" />
+    <Content Include="Images\marble\giallo-siena-extra.jpg" />
+    <Content Include="Images\marble\giallo-siena.jpg" />
+    <Content Include="Images\marble\grigio-carnico.jpg" />
+    <Content Include="Images\marble\perlato-sicilia.jpg" />
+    <Content Include="Images\marble\pietra-della-lessinia.jpg" />
+    <Content Include="Images\marble\portoro-extra.jpg" />
+    <Content Include="Images\marble\portoro-standard.jpg" />
+    <Content Include="Images\marble\rosa-perlino.jpg" />
+    <Content Include="Images\marble\rosso-asiago.jpg" />
+    <Content Include="Images\marble\statuario.jpg" />
+    <Content Include="Images\marble\trani-fiorito.jpg" />
+    <Content Include="Images\marble\travertino-classico.jpg" />
+    <Content Include="Images\marble\travertino-giallo.jpg" />
+    <Content Include="Images\marble\travertino-navona.jpg" />
+    <Content Include="Images\marble\travertino-noce.jpg" />
+    <Content Include="Images\marble\venatino.jpg" />
+    <Content Include="Images\marble\verde-alpi.jpg" />
+    <Content Include="Images\header-content.jpg" />
+    <Content Include="Images\planing-title.jpg" />
+    <Content Include="Images\kitchen-marble-disclaimer.jpg" />
+    <Content Include="Images\porphyry-paving1.jpg" />
+    <Content Include="Images\porphyry-paving2.jpg" />
+    <Content Include="Images\porphyry-paving3.jpg" />
+    <Content Include="Images\porphyry-setts.jpg" />
+    <Content Include="Images\porphyry1.jpg" />
+    <Content Include="Images\porphyry2.jpg" />
+    <Content Include="Images\porphyry3.jpg" />
+    <Content Include="Images\quarries-1.jpg" />
+    <Content Include="Images\quarries-2.jpg" />
+    <Content Include="Images\quarries-3.jpg" />
+    <Content Include="Images\quarries.jpg" />
+    <Content Include="Images\scala.jpg" />
+    <Content Include="Images\slabs-1.jpg" />
+    <Content Include="Images\slabs-2.jpg" />
+    <Content Include="Images\slabs-3.jpg" />
+    <Content Include="Images\slabs-footer.jpg" />
+    <Content Include="Images\slabs-header.jpg" />
+    <Content Include="Images\slabs-title.jpg" />
+    <Content Include="Images\slabs.jpg" />
+    <Content Include="Images\slide\bathroom.jpg" />
+    <Content Include="Images\slide\hall-hotel.jpg" />
+    <Content Include="Images\slide\hotel.jpg" />
+    <Content Include="Images\slide\kitchen.jpg" />
+    <Content Include="Images\slide\quarries.jpg" />
+    <Content Include="Images\slide\slabs.jpg" />
+    <Content Include="feedbackTemplate.html" />
+    <Content Include="robots.txt" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\brochurePages_marbleitalia.pdf" />
+    <None Include="Properties\PublishProfiles\MarbleItalia.pubxml" />
+    <None Include="Properties\PublishProfiles\MarbleItaliaProd.pubxml" />
+    <None Include="Properties\PublishProfiles\MarbleItaliaTestFTP.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\css3-animate-it.js" />
+    <Content Include="Scripts\fancybox\blank.gif" />
+    <Content Include="Scripts\fancybox\fancybox_loading%402x.gif" />
+    <Content Include="Scripts\fancybox\fancybox_loading.gif" />
+    <Content Include="Scripts\fancybox\fancybox_overlay.png" />
+    <Content Include="Scripts\fancybox\fancybox_sprite%402x.png" />
+    <Content Include="Scripts\fancybox\fancybox_sprite.png" />
+    <Content Include="Scripts\fancybox\helpers\fancybox_buttons.png" />
+    <Content Include="Scripts\fancybox\helpers\jquery.fancybox-buttons.css" />
+    <Content Include="Scripts\fancybox\helpers\jquery.fancybox-buttons.js" />
+    <Content Include="Scripts\fancybox\helpers\jquery.fancybox-media.js" />
+    <Content Include="Scripts\fancybox\helpers\jquery.fancybox-thumbs.css" />
+    <Content Include="Scripts\fancybox\helpers\jquery.fancybox-thumbs.js" />
+    <Content Include="Scripts\fancybox\jquery.fancybox.css" />
+    <Content Include="Scripts\fancybox\jquery.fancybox.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery.cycle.all.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\master.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\smoothDivScroll\ajaxContentMixed.html" />
+    <Content Include="Scripts\smoothDivScroll\css\smoothDivScroll.css" />
+    <Content Include="Scripts\smoothDivScroll\images\ajaxDemo\blacksmith.jpg" />
+    <Content Include="Scripts\smoothDivScroll\images\ajaxDemo\cabin.jpg" />
+    <Content Include="Scripts\smoothDivScroll\images\ajaxDemo\charlesDickens.jpg" />
+    <Content Include="Scripts\smoothDivScroll\images\ajaxDemo\mrPip.jpg" />
+    <Content Include="Scripts\smoothDivScroll\images\ajaxDemo\tombstone.jpg" />
+    <Content Include="Scripts\smoothDivScroll\images\ajaxDemo\victorianCastle.jpg" />
+    <Content Include="Scripts\smoothDivScroll\images\ajaxDemo\victorianLady.jpg" />
+    <Content Include="Scripts\smoothDivScroll\images\ajaxDemo\victorianMan.jpg" />
+    <Content Include="Scripts\smoothDivScroll\images\arrow_left.gif" />
+    <Content Include="Scripts\smoothDivScroll\images\arrow_left.png" />
+    <Content Include="Scripts\smoothDivScroll\images\arrow_right.gif" />
+    <Content Include="Scripts\smoothDivScroll\images\arrow_right.png" />
+    <Content Include="Scripts\smoothDivScroll\images\big_transparent.gif" />
+    <Content Include="Scripts\smoothDivScroll\images\cursors\cursor_arrow_left.cur" />
+    <Content Include="Scripts\smoothDivScroll\images\cursors\cursor_arrow_left.gif" />
+    <Content Include="Scripts\smoothDivScroll\images\cursors\cursor_arrow_left.png" />
+    <Content Include="Scripts\smoothDivScroll\images\cursors\cursor_arrow_right.cur" />
+    <Content Include="Scripts\smoothDivScroll\images\cursors\cursor_arrow_right.gif" />
+    <Content Include="Scripts\smoothDivScroll\images\cursors\cursor_arrow_right.png" />
+    <Content Include="Scripts\smoothDivScroll\images\demo\dog.jpg" />
+    <Content Include="Scripts\smoothDivScroll\images\demo\field.jpg" />
+    <Content Include="Scripts\smoothDivScroll\images\demo\gnome.jpg" />
+    <Content Include="Scripts\smoothDivScroll\images\demo\golf.jpg" />
+    <Content Include="Scripts\smoothDivScroll\images\demo\leaf.jpg" />
+    <Content Include="Scripts\smoothDivScroll\images\demo\pencils.jpg" />
+    <Content Include="Scripts\smoothDivScroll\images\demo\river.jpg" />
+    <Content Include="Scripts\smoothDivScroll\images\demo\train.jpg" />
+    <Content Include="Scripts\smoothDivScroll\index.html" />
+    <Content Include="Scripts\smoothDivScroll\js\jquery-ui-1.10.3.custom.min.js" />
+    <Content Include="Scripts\smoothDivScroll\js\jquery-ui-1.8.23.custom.min.js" />
+    <Content Include="Scripts\smoothDivScroll\js\jquery.kinetic.min.js" />
+    <Content Include="Scripts\smoothDivScroll\js\jquery.mousewheel.min.js" />
+    <Content Include="Scripts\smoothDivScroll\js\jquery.smoothdivscroll-1.3-min.js" />
+    <Content Include="Scripts\smoothDivScroll\js\source\jquery-ui-1.10.3.custom.js" />
+    <Content Include="Scripts\smoothDivScroll\js\source\jquery.kinetic.js" />
+    <Content Include="Scripts\smoothDivScroll\js\source\jquery.mousewheel.js" />
+    <Content Include="Scripts\smoothDivScroll\js\source\jquery.smoothDivScroll-1.3.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="sitemap.xml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Materials\Marble.cshtml" />
+    <Content Include="Views\Home\Quarries.cshtml" />
+    <Content Include="Views\Home\Slabs.cshtml" />
+    <Content Include="Views\Home\Blocks.cshtml" />
+    <Content Include="Views\Home\Consultation.cshtml" />
+    <Content Include="Views\Home\Gallery.cshtml" />
+    <Content Include="Views\Shared\_LayoutHome.cshtml" />
+    <Content Include="Views\Materials\Porphyry.cshtml" />
+    <Content Include="Views\Home\Quote.cshtml" />
+    <Content Include="Scripts\smoothDivScroll\.gitignore" />
+    <Content Include="Scripts\smoothDivScroll\Makefile" />
+    <Content Include="Scripts\smoothDivScroll\README.md" />
+    <Content Include="Views\Home\Privacy.cshtml" />
+    <Content Include="Views\Shared\_Menu.cshtml" />
+    <Content Include="Views\Materials\Travertine.cshtml" />
+    <Content Include="Views\Materials\Onyx.cshtml" />
+    <Content Include="Views\Slabs\Onyx.cshtml" />
+    <Content Include="Views\Slabs\Calacatta.cshtml" />
+    <Content Include="Views\Slabs\Carrara.cshtml" />
+    <Content Include="Views\Slabs\Statuario.cshtml" />
+    <Content Include="Views\Slabs\Arabescato.cshtml" />
+    <Content Include="Views\Slabs\AllAvailable.cshtml" />
+    <Content Include="Views\Tiles\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Master.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Master.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1647</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1647/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

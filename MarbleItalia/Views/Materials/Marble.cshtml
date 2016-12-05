@@ -1,0 +1,459 @@
+﻿@{
+    ViewBag.Title = "Materials";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+@section Meta{
+    <meta name="description" content="Easy to shape and elegant in appearance, marble is the ideal material for use in construction and interior design.
+        Sourced directly from the quarry, it is available in blocks, slabs or shaped to the requirements of your project." />
+}
+
+@section Style{
+    <link href="~/Content/materials.css" rel="stylesheet" />
+    <link href="~/Scripts/fancybox/jquery.fancybox.css" rel="stylesheet" />
+}
+@section Scripts{
+    <script src="~/Scripts/fancybox/jquery.fancybox.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".materialGallery").fancybox();
+        });
+    </script>
+}
+@section Header{
+    <div class="animatedParent animateOnce">
+        <div class="header-content animated fadeInDown">
+            <h2>@ViewBag.Title</h2>
+        </div>
+    </div>
+}
+
+
+<div class="container body-content">
+    <h3>Marble & Stone</h3>
+    <p>
+        Italian marble is widely appreciated for its high quality and variety of choice, in fact this marble fit floors and walls of a bathroom or room in a fantastic way. Italian marble is mainly used in flooring or walls for both commercial and residential projects: hotels, restaurants or private house. We offer marble cut to size, slabs and tiles based on your project requirements and specifications.
+    </p>
+    <p>
+        We mainly work with Italian marbles as we are able to get the material straight from the source offering a wide range of marbles at the most competitive price around but through the collaborations with all our partners we can source marble or stones from all over the world: Brazil, Africa and Europe.
+    </p>
+    @*<p>
+            Easy to shape and elegant in appearance, marble is the ideal material for use in construction and interior design.
+            Sourced directly from the quarry, it is available in blocks, slabs or shaped to the requirements of your project.
+        </p>*@
+    
+    <div class="row materials-container">
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/Images/marble/bianco-perlino.jpg" title="Bianco Perlino">
+                    <img src="~/Images/marble/bianco-perlino.jpg" />
+                </a>
+            </div>
+            <p class="nameMaterial">Bianco Perlino</p>
+        </div>
+
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/Images/marble/bardiglio-nuvolato.jpg" title="Bardiglio Nuvolato">
+
+                    <img src="~/Images/marble/bardiglio-nuvolato.jpg" />
+                </a>
+            </div>
+            <p class="nameMaterial">Bardiglio Nuvolato</p>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/Images/marble/bardiglio-imperiale.jpg" title="Bardiglio Imperiale">
+
+                    <img src="~/Images/marble/bardiglio-imperiale.jpg" />
+                </a>
+            </div>
+            <p class="nameMaterial">Bardiglio Imperiale</p>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/Images/marble/bianco-carrara-cd.jpg" title="Bianco Carrara CD">
+
+                    <img src="~/Images/marble/bianco-carrara-cd.jpg" />
+                </a>
+            </div>
+            <p class="nameMaterial">Bianco Carrara CD</p>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/Images/marble/bianco-carrara-c.jpg" title="Bianco Carrara C">
+                    <img src="~/Images/marble/bianco-carrara-c.jpg" />
+
+                </a>
+            </div>
+            <p class="nameMaterial">Bianco Carrara C</p>
+        </div>
+
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/images/marble/carrara-bianco-gioia.jpg" title="Carrara Bianco Gioia">
+                    <img src="~/images/marble/carrara-bianco-gioia.jpg" />
+                </a>
+            </div><p class="nameMaterial">Carrara Bianco Gioia</p>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/Images/marble/calacatta.jpg" title="Calacatta">
+                    <img src="~/Images/marble/calacatta.jpg" />
+                </a>
+            </div>
+            <p class="nameMaterial">Calacatta</p>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/Images/marble/calacatta-extra.jpg" title="Calacatta Extra">
+
+                    <img src="~/Images/marble/calacatta-extra.jpg" />
+                </a>
+            </div>
+            <p class="nameMaterial">Calacatta Extra</p>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/Images/marble/top-quality-calacatta.jpg" title="Top Quality Calacatta">
+
+                    <img src="~/Images/marble/top-quality-calacatta.jpg" />
+                </a>
+            </div>
+            <p class="nameMaterial">Top Quality Calacatta</p>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/Images/marble/statuarietto.jpg" title="Statuarietto">
+
+                    <img src="~/Images/marble/statuarietto.jpg" />
+                </a>
+            </div>
+            <p class="nameMaterial">Statuarietto</p>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/Images/marble/statuario-venato.jpg" title="Statuario Venato">
+
+                    <img src="~/Images/marble/statuario-venato.jpg" />
+                </a>
+            </div>
+            <p class="nameMaterial">Statuario Venato</p>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/images/marble/statuario.jpg" title="Statuario">
+                    <img src="~/images/marble/statuario.jpg" />
+                </a>
+            </div><p class="nameMaterial">Statuario</p>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/Images/marble/arabescato.jpg" title="Commercial Arabescato">
+                    <img src="~/Images/marble/arabescato.jpg" />
+                </a>
+            </div>
+            <p class="nameMaterial">Commercial Arabescato</p>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/Images/marble/top-quality-arabescato.jpg" title="Top Quality Arabescato">
+
+                    <img src="~/Images/marble/top-quality-arabescato.jpg" />
+                </a>
+            </div>
+            <p class="nameMaterial">Top Quality Arabescato</p>
+        </div>
+
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/Images/marble/thassos.jpg" title="Thassos">
+
+                    <img src="~/Images/marble/thassos.jpg" />
+                </a>
+            </div>
+            <p class="nameMaterial">Thassos</p>
+        </div>
+
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/images/marble/venatino.jpg" title="Venatino">
+                    <img src="~/images/marble/venatino.jpg" />
+                </a>
+            </div><p class="nameMaterial">Venatino</p>
+        </div>
+
+
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/Images/marble/bianco-zandobbio.jpg" title="Bianco Zandobbio">
+                    <img src="~/Images/marble/bianco-zandobbio.jpg" />
+                </a>
+            </div>
+            <p class="nameMaterial">Bianco Zandobbio</p>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/Images/marble/foussana-grey.jpg" title="Foussana Grey">
+
+                    <img src="~/Images/marble/foussana-grey.jpg" />
+                </a>
+            </div>
+            <p class="nameMaterial">Foussana Grey</p>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/images/marble/grigio-carnico.jpg" title="Grigio Carnico">
+                    <img src="~/images/marble/grigio-carnico.jpg" />
+                </a>
+            </div><p class="nameMaterial">Grigio Carnico</p>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/Images/marble/pietra-grey.jpg" title="Pietra Grey">
+
+                    <img src="~/Images/marble/pietra-grey.jpg" />
+                </a>
+            </div>
+            <p class="nameMaterial">Pietra Grey</p>
+        </div>
+
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/Images/marble/negro-marquina.jpg" title="Negro Marquina">
+
+                    <img src="~/Images/marble/negro-marquina.jpg" />
+                </a>
+            </div>
+            <p class="nameMaterial">Negro Marquina</p>
+        </div>
+
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/Images/marble/noir-saint-laurent.jpg" title="Noir Saint Laurent">
+
+                    <img src="~/Images/marble/noir-saint-laurent.jpg" />
+                </a>
+            </div>
+            <p class="nameMaterial">Noir Saint Laurent</p>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/images/marble/portoro-extra.jpg" title="Portoro Extra">
+                    <img src="~/images/marble/portoro-extra.jpg" />
+                </a>
+            </div><p class="nameMaterial">Portoro Extra</p>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/images/marble/portoro-standard.jpg" title="Portoro Standard">
+                    <img src="~/images/marble/portoro-standard.jpg" />
+                </a>
+            </div><p class="nameMaterial">Portoro Standard</p>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/Images/marble/emperador-dark.jpg" title="Emperador Dark">
+
+                    <img src="~/Images/marble/emperador-dark.jpg" />
+                </a>
+            </div>
+            <p class="nameMaterial">Emperador Dark</p>
+        </div>
+
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/Images/marble/Emperador-Light.jpg" title="Emperador Light">
+
+                    <img src="~/Images/marble/Emperador-Light.jpg" />
+                </a>
+            </div>
+            <p class="nameMaterial">Emperador Light</p>
+        </div>
+
+
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/Images/marble/botticino-classico.jpg" title="Botticino Classico">
+
+                    <img src="~/Images/marble/botticino-classico.jpg" />
+                </a>
+            </div>
+            <p class="nameMaterial">Botticino Classico</p>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/Images/marble/botticino-fiorito.jpg" title="Botticino Fiorito">
+                    <img src="~/Images/marble/botticino-fiorito.jpg" />
+                </a>
+            </div>
+            <p class="nameMaterial">Botticino Fiorito</p>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/Images/marble/beige-alpi-c.jpg" title="Beige Alpi C">
+                    <img src="~/Images/marble/beige-alpi-c.jpg" />
+                </a>
+            </div>
+            <p class="nameMaterial">Beige Alpi C</p>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/Images/marble/beige-alpi-d.jpg" title="Beige Alpi D">
+                    <img src="~/Images/marble/beige-alpi-d.jpg" />
+                </a>
+            </div>
+            <p class="nameMaterial">Beige Alpi D</p>
+        </div>
+
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/Images/marble/thala-beige.jpg" title="Thala Beige">
+
+                    <img src="~/Images/marble/thala-beige.jpg" />
+                </a>
+            </div>
+            <p class="nameMaterial">Thala Beige</p>
+        </div>
+
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/Images/marble/triesta.jpg" title="Triesta">
+
+                    <img src="~/Images/marble/triesta.jpg" />
+                </a>
+            </div>
+            <p class="nameMaterial">Triesta</p>
+        </div>
+
+
+
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/images/marble/giallo-atlantide.jpg" title="Giallo Atlantide">
+                    <img src="~/images/marble/giallo-atlantide.jpg" />
+                </a>
+            </div><p class="nameMaterial">Giallo Atlantide</p>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/images/marble/giallo-reale.jpg" title="Giallo Reale">
+                    <img src="~/images/marble/giallo-reale.jpg" />
+                </a>
+            </div><p class="nameMaterial">Giallo Reale</p>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/images/marble/giallo-siena.jpg" title="Giallo Siena">
+                    <img src="~/images/marble/giallo-siena.jpg" />
+                </a>
+            </div><p class="nameMaterial">Giallo Siena</p>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/images/marble/giallo-siena-extra.jpg" title="Giallo Siena Extra">
+                    <img src="~/images/marble/giallo-siena-extra.jpg" />
+                </a>
+            </div><p class="nameMaterial">Giallo Siena Extra</p>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/images/marble/perlato-sicilia.jpg" title="Perlato Sicilia">
+                    <img src="~/images/marble/perlato-sicilia.jpg" />
+                </a>
+            </div><p class="nameMaterial">Perlato Sicilia</p>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/images/marble/pietra-della-lessinia.jpg" title="Pietra della Lessinia">
+                    <img src="~/images/marble/pietra-della-lessinia.jpg" />
+                </a>
+            </div><p class="nameMaterial">Pietra della Lessinia</p>
+        </div>
+
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/images/marble/rojo-alicante.jpg" title="Rojo Alicante">
+
+                    <img src="~/Images/marble/rojo-alicante.jpg" />
+                </a>
+            </div><p class="nameMaterial">Rojo Alicante</p>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/images/marble/rosso-asiago.jpg" title="Rosso Asiago">
+                    <img src="~/images/marble/rosso-asiago.jpg" />
+                </a>
+            </div><p class="nameMaterial">Rosso Asiago</p>
+        </div>
+
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/images/marble/trani-fiorito.jpg" title="Trani Fiorito">
+                    <img src="~/images/marble/trani-fiorito.jpg" />
+                </a>
+            </div><p class="nameMaterial">Trani Fiorito</p>
+        </div>
+       
+
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/images/marble/rosa-perlino.jpg" title="Rosa Perlino">
+                    <img src="~/images/marble/rosa-perlino.jpg" />
+                </a>
+            </div><p class="nameMaterial">Rosa Perlino</p>
+        </div>
+
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/Images/marble/sunny.jpg" title="Sunny">
+                    <img src="~/Images/marble/sunny.jpg" />
+                </a>
+            </div>
+            <p class="nameMaterial">Sunny</p>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/Images/marble/silvia.jpg" title="Silvia">
+                    <img src="~/Images/marble/silvia.jpg" />
+                </a>
+            </div>
+            <p class="nameMaterial">Silvia</p>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/Images/marble/galala.jpg" title="Galala">
+                    <img src="~/Images/marble/galala.jpg" />
+                </a>
+            </div>
+            <p class="nameMaterial">Galala</p>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/Images/marble/green-guatemala.jpg" title="Green Guatemala">
+
+                    <img src="~/Images/marble/green-guatemala.jpg" />
+                </a>
+            </div>
+            <p class="nameMaterial">Green Guatemala</p>
+
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/images/marble/verde-alpi.jpg" title="Verde Alpi">
+                    <img src="~/images/marble/verde-alpi.jpg" />
+                </a>
+            </div><p class="nameMaterial">Verde Alpi</p>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div class="material">
+                <a class="materialGallery" rel="material" href="/Images/marble/azul-macaubas.jpg" title="Azul Macaubas">
+
+                    <img src="~/Images/marble/azul-macaubas.jpg" />
+                </a>
+            </div>
+            <p class="nameMaterial">Azul Macaubas</p>
+        </div>
+
+
+    </div>
+</div>
