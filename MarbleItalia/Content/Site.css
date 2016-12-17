@@ -15,16 +15,19 @@ a {
         text-decoration: none;
         text-shadow: 1px 1px 2px rgba(0,0,0,.1);
     }
+
 address {
     font-style: normal;
     font-weight: 300;
 }
+
 .optionSize .form-group {
-    display:none
+    display: none;
 }
+
 .optionSize .input-group-addon {
-    font-size:11px;
-    padding:6px 7px;
+    font-size: 11px;
+    padding: 6px 7px;
 }
 /* Set padding to keep content from hitting the edges */
 .body-content {
@@ -47,7 +50,7 @@ address {
 
 /* Set width on the form input elements since they're 100% wide by default */
 .img-circle {
-    margin:5px 0
+    margin: 5px 0;
 }
 
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus, .nav .active > a {
@@ -104,14 +107,16 @@ address {
     .navbar a {
         color: #FFF;
     }
+
 .nav > li > a {
     padding-left: 10px;
     padding-right: 10px;
 }
-.nav > li > a:hover, .nav > li > a:focus {
-    text-decoration: none;
-    background-color: transparent;
-}
+
+    .nav > li > a:hover, .nav > li > a:focus {
+        text-decoration: none;
+        background-color: transparent;
+    }
 
 .navbar-header {
     padding: 12px 0;
@@ -174,18 +179,22 @@ address {
         width: 32px;
         height: 32px;
     }
+
 .social-footer {
-    text-align:right;
+    text-align: right;
 }
+
     .social-footer p {
-        margin:0;
-        font-size:15px;
+        margin: 0;
+        font-size: 15px;
     }
-.social-footer a {
-    display:inline-block;
-    font-size:24px;
-    margin:0 5px;
-}
+
+    .social-footer a {
+        display: inline-block;
+        font-size: 24px;
+        margin: 0 5px;
+    }
+
 .social-header {
     position: absolute;
     text-align: center;
@@ -194,20 +203,22 @@ address {
     top: 110px;
     left: 50%;
     margin-left: -110px;
-    padding:  5px;
+    padding: 5px;
     border-radius: 5px;
 }
-.social-header a {
-    display: inline-block;
-    font-size: 18px;
-    padding: 1px;
-    margin: 5px;
-    text-align: center;
-    background-color: #fff;
-    border-radius: 50%;
-    width: 28px;
-    height: 28px;
-}
+
+    .social-header a {
+        display: inline-block;
+        font-size: 18px;
+        padding: 1px;
+        margin: 5px;
+        text-align: center;
+        background-color: #fff;
+        border-radius: 50%;
+        width: 28px;
+        height: 28px;
+    }
+
 .fa-facebook {
     color: #2e51a8;
 }
@@ -240,7 +251,7 @@ address {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-color:#ededed;
+    background-color: #ededed;
     width: 100% !important;
     background-attachment: fixed;
     background-position: bottom center;
@@ -300,22 +311,34 @@ address {
     min-height: 550px;
     background-size: cover;
     background-attachment: fixed;
-    background-position: top center;
+    background-position: center;
     width: 100%;
     padding: 200px 0 0;
     box-shadow: inset 0 -15px 25px 0 #FFF;
-    margin-bottom:40px
+    margin-bottom: 40px;
 }
 
     .headerBig-content h2 {
         font-weight: 300;
         font-size: 52px;
+        display: inline-block;
+        margin: 0 0 5px 0;
+        background-color: rgba(51, 51, 51, 0.65);
+        color: #FFF;
+        padding: 8px 10px;
     }
+
     .headerBig-content h4 {
-        margin-bottom:30px;
+        margin-bottom: 30px;
         font-size: 28px;
         font-weight: 100;
+        display: inline-block;
+        margin: 0 0 5px 0;
+        background-color: rgba(51, 51, 51, 0.65);
+        color: #FFF;
+        padding: 8px 10px;
     }
+
 header {
     margin-bottom: 30px;
 }
@@ -366,7 +389,7 @@ header {
     cursor: pointer;
     box-shadow: 1px 1px 2px rgba(0,0,0,.5), inset 1px 1px 2px rgba(0,0,0,.5);
     text-shadow: 1px 1px 2px rgba(0,0,0,.7);
-    font-weight:500;
+    font-weight: 500;
 }
 
 .btn-readmore {
@@ -378,7 +401,7 @@ header {
     padding: 8px 0;
     font-size: 16px;
     cursor: pointer;
-    font-weight:500;
+    font-weight: 500;
 }
 
 .navbar-collapse {
@@ -392,10 +415,12 @@ header {
 .animatedParent {
     overflow-x: visible;
 }
+
 .homesubtitle {
-     font-size: 42px !important;
-     font-weight: 300;
+    font-size: 42px !important;
+    font-weight: 300;
 }
+
 .parallax {
     background-image: url('/Images/kitchen-marble-disclaimer.jpg');
     background-attachment: fixed;
@@ -404,7 +429,7 @@ header {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-color:#ededed;
+    background-color: #ededed;
     width: 100%;
     padding: 100px 0;
 }
@@ -443,10 +468,11 @@ header {
 
 .btn {
     text-transform: uppercase;
-    font-weight:500;
+    font-weight: 500;
 }
+
 .step h3 {
-    border-bottom:0
+    border-bottom: 0;
 }
 /*About us*/
 
@@ -607,7 +633,14 @@ a:hover, a:active, a:focus {
     background-color: transparent;
     color: #555;
     border: 2px solid #555;
-    font-weight:500;
+    font-weight: 500;
+}
+.btn-mrb-light {
+    border-radius: 0;
+    background-color: #FFF;
+    color: #555;
+    border: 2px solid #555;
+    font-weight: 500;
 }
 
 #col-right .form-control {
@@ -628,7 +661,7 @@ a:hover, a:active, a:focus {
 }
 
     .title-onimage h3 {
-        border-bottom:0;
+        border-bottom: 0;
         position: absolute;
         top: 10px;
         left: 0;
@@ -644,32 +677,35 @@ a:hover, a:active, a:focus {
     background: #333;
     position: relative;
 }
-#hexagon:before {
-    content: "";
-    position: absolute;
-    top: -25px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 25px solid #333;
-}
-#hexagon:after {
-    content: "";
-    position: absolute;
-    bottom: -25px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-top: 25px solid #333;
-}
+
+    #hexagon:before {
+        content: "";
+        position: absolute;
+        top: -25px;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 25px solid #333;
+    }
+
+    #hexagon:after {
+        content: "";
+        position: absolute;
+        bottom: -25px;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 25px solid #333;
+    }
 
 .faq label {
     font-size: 16px;
 }
+
 .faq p {
     font-size: 15px;
     line-height: 1.5;

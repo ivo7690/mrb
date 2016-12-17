@@ -47,3 +47,10 @@
     background: rgba(0, 0, 0, 0.5);
     font-size: 15px !important;
 }
+
+.backgroundSliding {    
+	-webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    transition: all 2s ease;
+}

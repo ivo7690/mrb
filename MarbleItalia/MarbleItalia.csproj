@@ -247,6 +247,9 @@
     <Content Include="Images\onyx\red-onyx.jpg" />
     <Content Include="Images\onyx\white-gold-vein-onyx.jpg" />
     <Content Include="Images\onyx\white-onyx.jpg" />
+    <Content Include="Images\slabs\calacatta-borghini-range-rover.jpg" />
+    <Content Include="Images\slabs\calacatta-borghini.jpg" />
+    <Content Include="Images\slabs\calacatta-michelangelo-effeitalia.jpg" />
     <Content Include="TemplateMail.html" />
     <Content Include="googlea77b1b3cb7020df6.html" />
     <Content Include="Images\gallery\kitchen\carrara-kitchen.jpg" />

@@ -1,9 +1,10 @@
 ﻿@{
-    ViewBag.Title = "Calacatta Marble";
+    ViewBag.Title = "Calacatta  Marble Supplier | Walls & Floors Tiles";
     Layout = "~/Views/Shared/_LayoutHome.cshtml";
 }
 @section Meta{
-    @*<meta name="description" content="" />*@
+    <meta name="description" content="Calacatta marble cut to size for bespoke project, slabs, tiles for bathrooms, kitchens, book matched walls, hallways, conservatories. Direct Importers." />
+    <meta name="keywords" content="Calacatta marble, Calacatta marble supplier, Calacatta marble tiles, Calacatta marble bathrooms, Calacatta marble kitchens" />
 }
 @section Style{
     <link href="~/Content/materials.css" rel="stylesheet" />
@@ -14,18 +15,33 @@
     <script>
         $(document).ready(function () {
             $(".materialGallery").fancybox();
+
+            var d, b;
+            d = [
+                 "/Images/slabs/calacatta-borghini.jpg",
+                 "/Images/slabs/calacatta-borghini-range-rover.jpg",
+                "/Images/slabs/calacatta-michelangelo-effeitalia.jpg"];
+            b = 0;
+            return setInterval(function () {
+                $(".backgroundSliding").css("background-image","url(" + d[b] +")");
+                b += 1; if (b === d.length) return b = 0
+
+            }, 5000)
+
         });
     </script>
 }
 @section Header{
     <div class="animatedParent animateOnce">
-        <div class="headerBig-content animated fadeInDown" style="background-image:url(http://opustone.com/media/k2/galleries/1069/Calacatta%20Porcelain%20Tile%20Opustone09b.jpg);">
+        <div class="headerBig-content animated fadeInDown backgroundSliding" style="background-image:url(/Images/slabs/calacatta-michelangelo-effeitalia.jpg);">
             <div class="container">
-                <h2>@ViewBag.Title</h2>
+                <h2>Calacatta  Marble</h2>
+                <div class="clearfix"></div>
                 <h4>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </h4>
-                <a class="btn btn-mrb btn-lg" href="/quote">Get A Quote </a>
+                <div class="clearfix"></div>
+                <a class="btn btn-mrb-light btn-lg" href="/quote">Get A Quote </a>
             </div>
         </div>
     </div>
@@ -33,18 +49,15 @@
 <div class="animatedParent animateOnce">
     <div class="container body-content animated fadeIn slower delay-750">
         <p>
-            Calacatta marble is a white-coloured marble with darkish grey veins, Calacatta marble together with Statuario
-            is considered to be part of the top range quality marbles coming from Carrara area. Calacatta marble shows bolder
-            veins pattern and much whiter background colour compared to Carrara or Arabescato marble.
+            Calacatta marble is a white-coloured marble with darkish grey veins. Calacatta marble, together with Statuario is part of the top range of quality marble coming from the Carrara area. Calacatta marble shows a bolder veins pattern and much whiter background colour compared to Carrara or Arabescato marble.
         </p>
         <p>
-            Calacatta marble is mainly used in interior applications for flooring, walls covering and kitchen or vanity top,
-            it’s also often used for bookmatched applications which makes stand out its beauty at the best.
+            Calacatta marble is mainly used in interior applications for flooring, covering walls and kitchen or vanity tops. It’s also often used for book matched applications which allows its beauty to stand out.
         </p>
         <p>
-            With our existing extensive ranges of stone tiles,we can now supply cut to size slabs and bespoke size stone tiles
-            to your specification, we can help and assist you in regards to pricing and availability.
+            With our existing extensive ranges of stone tiles, we can now supply cut to size slabs and bespoke size stone tiles to your specification. We can also help and assist you in regards to pricing and availability.
         </p>
+
         <hr />
         <div class="row">
             <div class="col-sm-3 col-xs-6">
