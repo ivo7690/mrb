@@ -1,4 +1,5 @@
-﻿@{
+﻿@model List<MarbleItalia.Controllers.SlabsController.Slabs>
+@{
     ViewBag.Title = "Calacatta  Marble Supplier | Walls & Floors Tiles";
     Layout = "~/Views/Shared/_LayoutHome.cshtml";
 }
@@ -12,42 +13,109 @@
 }
 @section Scripts{
     <script src="~/Scripts/fancybox/jquery.fancybox.js"></script>
+    <!-- Modal -->
+    <div class="modal fade" id="slabsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row text-center">
+                        <div class="col-sm-6 v-center">
+                            <a id="Bookmatch" class="materialGallery" rel="material">
+                                <img style="max-height:400px; max-width:100%" />
+                            </a>
+                        </div>
+                        <div class="col-sm-6 v-center">
+                            <a id="material" class="materialGallery" rel="material">
+                                <img style="max-height:400px;max-width:100%" />
+                            </a>
+                        </div>
+                    </div>
+                    <div style="text-align:center;margin:20px 0">
+                        <a class="btn btn-lg btn-mrb-light" href="/quote?ref=@ViewBag.MaterialType">Get a Quote</a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-mrb-light" data-dismiss="modal">Close</button>
+                    @*<button type="button" class="btn btn-primary">Save changes</button>*@
+                </div>
+            </div>
+        </div>
+    </div>
     <script>
+        $('#slabsModal').on('show.bs.modal', function (e) {
+            // do something...
+            $(this).find("#myModalLabel").text(e.relatedTarget.title);
+            $(this).find("#Bookmatch img").attr("src", e.relatedTarget.dataset.image);
+            $(this).find("#material img").attr("src", e.relatedTarget.dataset.image2);
+
+            $(this).find("#Bookmatch").attr("href", e.relatedTarget.dataset.image);
+            $(this).find("#material").attr("href", e.relatedTarget.dataset.image2);
+        })
         $(document).ready(function () {
             $(".materialGallery").fancybox();
 
-            var d, b;
-            d = [
-                 "/Images/slabs/calacatta-borghini.jpg",
-                 "/Images/slabs/calacatta-borghini-range-rover.jpg",
-                "/Images/slabs/calacatta-michelangelo-effeitalia.jpg"];
-            b = 0;
-            return setInterval(function () {
-                $(".backgroundSliding").css("background-image","url(" + d[b] +")");
-                b += 1; if (b === d.length) return b = 0
+            $('.btn-stock').click(function () {
+                $("body").animate({ scrollTop: $("#liveStock").offset().top - 110 }, 2000);
+            });
 
-            }, 5000)
 
+        });
+        $(window).load(function () {
+            $('.carousel-inner').cycle({
+                fx: 'fade',
+                timeout: 5000,
+                speed: 1000,
+                pager: '.carousel-indicators',
+                activePagerClass: 'active',
+                after: function (el, next_el) {
+                    $(next_el).addClass('activeSlide');
+                },
+                before: function (el) {
+                    $(el).removeClass('activeSlide');
+                }
+            });
         });
     </script>
 }
 @section Header{
     <div class="animatedParent animateOnce">
-        <div class="headerBig-content animated fadeInDown backgroundSliding" style="background-image:url(/Images/slabs/calacatta-michelangelo-effeitalia.jpg);">
-            <div class="container">
-                <h2>Calacatta  Marble</h2>
-                <div class="clearfix"></div>
-                <h4>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </h4>
-                <div class="clearfix"></div>
-                <a class="btn btn-mrb-light btn-lg" href="/quote">Get A Quote </a>
+        <div class="animated fadeInDown">
+
+            <div id="slabsCarousel" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="item-slide">
+                        <img src="/Images/slide/slabs/calacatta-borghini.jpg" />
+                    </div>
+                    <div class="item-slide">
+                        <img src="/Images/slide/slabs/CALACATTA-Bookmatch-MI-0637.jpg" alt="" />
+                    </div>
+                    <div class="item-slide">
+                        <img src="/Images/slide/slabs/calacatta-borghini-range-rover.jpg" />
+                    </div>
+                </div>
+
+                <div class="carousel-indicators" style="z-index:100;bottom:130px">
+                </div>
+                <div class="title">
+                    <h2>@ViewBag.MaterialType Marble</h2>
+
+                    @if (Model != null && Model.Any())
+                    {
+                        <a class="btn btn-mrb-light btn-lg btn-stock pull-right" href="#">Live Stocks</a>
+                    }
+                </div>
+                @*<a class="carousel-control left" href="#myCarousel" data-slide="prev"></a>
+                    <a class="carousel-control right" href="#myCarousel" data-slide="next"></a>*@
             </div>
         </div>
     </div>
 }
-<div class="animatedParent animateOnce">
-    <div class="container body-content animated fadeIn slower delay-750">
+<div class="">
+    <div class="container body-content">
         <p>
             Calacatta marble is a white-coloured marble with darkish grey veins. Calacatta marble, together with Statuario is part of the top range of quality marble coming from the Carrara area. Calacatta marble shows a bolder veins pattern and much whiter background colour compared to Carrara or Arabescato marble.
         </p>
@@ -58,39 +126,26 @@
             With our existing extensive ranges of stone tiles, we can now supply cut to size slabs and bespoke size stone tiles to your specification. We can also help and assist you in regards to pricing and availability.
         </p>
 
-        <hr />
-        <div class="row">
-            <div class="col-sm-3 col-xs-6">
-                <div class="slabContainer">
-                    <div class="slabImage">
-                        <a class="materialGallery" rel="material" href="/Images/marble/calacatta.jpg" title="Calacatta">
-                            <img src="~/Images/marble/calacatta.jpg" />
-                        </a>
+        @if (Model != null && Model.Any())
+        {
+            <h3 id="liveStock">Live Stock @ViewBag.MaterialType</h3>
+            <div class="row">
+                @foreach (var m in Model)
+                {
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="slabContainer" data-toggle="modal" data-target="#slabsModal" title="@m.Name"
+                             data-image="@m.BasePath@m.Name/@m.images[0]"
+                             data-image2="@(m.images.Count > 1 ? m.BasePath + m.Name+"/"+m.images[1] : string.Empty)">
+                            <div class="slabImage" style="background-image:url('@m.BasePath@m.Name/@m.DefaultImage')">
+
+                            </div>
+                            <div class="slabText">@m.Name</div>
+                        </div>
                     </div>
-                    <div class="slabText">Calacatta</div>
-                </div>
+                }
             </div>
-            <div class="col-sm-3 col-xs-6">
-                <div class="slabContainer">
-                    <div class="slabImage">
-                        <a class="materialGallery" rel="material" href="/Images/marble/calacatta-extra.jpg" title="Calacatta Extra">
-                            <img src="~/Images/marble/calacatta-extra.jpg" />
-                        </a>
-                    </div>
-                    <div class="slabText">Calacatta Extra</div>
-                </div>
-            </div>
-            <div class="col-sm-3 col-xs-6">
-                <div class="slabContainer">
-                    <div class="slabImage">
-                        <a class="materialGallery" rel="material" href="/Images/marble/top-quality-calacatta.jpg" title="Top Quality Calacatta">
-                            <img src="~/Images/marble/top-quality-calacatta.jpg" />
-                        </a>
-                    </div>
-                    <div class="slabText">Top Quality Calacatta</div>
-                </div>
-            </div>
-        </div>
+
+        }
     </div>
 </div>
 <div class="container-fluid fatfooter" style="background-image:url('/Images/slabs-footer.jpg');background-position:center; padding:50px 0; margin-top:30px">
@@ -98,7 +153,7 @@
         <div class="row">
             <div class="col-sm-12 text-center">
                 <p style="font-weight:300;font-size:28px;margin-bottom:20px">Request a quote, we will contact you within 48 hours.</p>
-                <a href="/quote" class="btn btn-default btn-lg" title="Get a quote">GET A QUOTE</a>
+                <a href="/quote?ref=@ViewBag.MaterialType" class="btn btn-default btn-lg" title="Get a quote">GET A QUOTE</a>
             </div>
         </div>
     </div>
@@ -107,103 +162,34 @@
 
 <div class="animatedParent animateOnce">
     <div class="container body-content animated fadeIn">
-        <h3>FAQ</h3>
+        <h3 class="text-center">Any Question?</h3>
         <div class="row">
-            <div class="col-sm-6 faq">
-                <label>Could you please send to us a sample of "marble or stone"?</label>
+            <div class="col-sm-8 col-sm-offset-2 text-center">
                 <p>
-                    We can provide indicative sample 10 x 10 cm but we always advice that when dealing with natural stones you see nothing in a small sample. Natural stone background colour and veins pattern keep changing based on the actual slabs available. Never trust a sample but see what it is available in stock at the moment.
+                    Please check our <a href="/faq" style="text-decoration:underline">Frequently Asked Questions</a> page.
                 </p>
-            </div>
-            <div class="col-sm-6 faq">
-                <label>Where do you stock all the slabs?</label>
+                <div>
+                    OR
+                </div>
                 <p>
-                    We own marble quarries of Bianco and Rosa perlino in Altopiano di Asiago (Italy) and we stock all the slabs in Verona where we meticulously follow the entire manufacturing process at the highest standard.
+                    Get in touch for more information
                 </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6 faq">
-                <label>How long does it take to the slabs/tiles/worktop/vanity top to be delivered in UK?</label>
-                <p>
-                    Everything depends from the size of the project. If you require less than 100m2 it usually takes 3 weeks (2 weeks to manufacture and 4 working days of transport from Verona or Carrara to London).
-                    <br />
-                    If the project requires for example more than 100m2 it takes between 4 to 5 weeks for delivery.
-                    <br />
-                    At the moment of the order you will receive the exact timing for delivery.
-                </p>
-            </div>
-            <div class="col-sm-6 faq">
-                <label>Do you stock marble tiles?</label>
-                <p>
-                    Yes of course. When buying stock of marble tiles the risk of receiving marble tiles which comes from different slabs batch it’s quite common , that’s why once we receive an order we process slabs or blocks which comes from the same batch, that means you don’t absolutely risk to get marble tiles which presents colour variations or different grade of quality between them, we guarantee you get a first quality selected product.
-                </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6 faq">
-                <label>Can you supply Carrara bianco C or CD marble?</label>
-                <p>
-                    Yes we can but the real one only. Carrara’s always been the most known and researched marble in the world. Unluckly nowadays carrara marble market has become very misleading as other countries are producing similar lower quality product calling it CARRARA BIANCO.(or Carrera Bianco). The same is actually happening with others famous Italian marble like BOTTICINO CLASSICO and TRAVERTINE.
-                    <br />
-                    We suggest that before making a purchase you have to make sure which is the country of origin.
-                </p>
-            </div>
-            <div class="col-sm-6 faq">
-                <label>Do you provide the installation service?</label>
-                <p>
-                    We will advise on how to use or fit the marble, how to select the best stone based on your project requirements and all aspects and characteristic of stones but we don’t directly provide the installation service. We will give you a list of recommended fitters we collaborate with.
-                </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6 faq">
-                <label>In which thickness are marble tiles or slabs available?</label>
-                <p>
-                    We can supply slabs in different thickness, usually 20 or 30 mm, different matter with regards to Marble Tiles which can be cut in 10 or 20 mm thickness.
-                </p>
-            </div>
-            <div class="col-sm-6 faq">
-                <label>Do you supply marble counter top or vanity top?</label>
-                <p>
-                    Yes of course. We need to get from you drawings with precise measures, edge profile type, thickness if 20 or 30 mm, hob cutout, number of tap holes.
-                </p>
+                <form id="formContact" action="/contact" method="post" class="lineStyle">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="nameContact" name="name" placeholder="Enter name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control required" name="mail" id="EmailContact" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="txtMessage" rows="5" class="form-control required" placeholder="Message"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-default pull-right">SEND</button>
+                    <div class="clearfix"></div>
+                </form>
+
             </div>
         </div>
     </div>
 </div>
-<div class="fatfooter">
-    <div class="container-fluid" style="background-image:url('/Images/slabs-footer.jpg');background-position:center; padding:50px 0; margin-top:30px">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-8 col-sm-offset-2 text-center">
-                    <p style="font-size:32px;color:#FFF;font-weight:300;border-bottom:1px solid #FFF;padding-left:5px;margin-bottom:20px">
-                        Get in touch for more information
-                    </p>
-                </div>
-            </div>
-            <div class="row callAction">
-                <div class="col-sm-6 col-sm-offset-3 text-center">
-
-                    <form id="formContact" action="/contact" method="post">
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="nameContact" name="name" placeholder="Enter name">
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control required" name="mail" id="EmailContact" placeholder="Enter email">
-                        </div>
-                        <div class="form-group">
-                            <textarea name="txtMessage" rows="5" class="form-control required" placeholder="Message"></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-default pull-right">SEND</button>
-                        <div class="clearfix"></div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@section fatfooter{
-
-}

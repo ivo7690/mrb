@@ -3,42 +3,94 @@
       xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-<url>
-  <loc>http://mrbitalia.com/</loc>
-</url>
-<url>
-  <loc>http://mrbitalia.com/about</loc>
-</url>
-<url>
-  <loc>http://mrbitalia.com/materials/marble</loc>
-</url>
-<url>
-  <loc>http://mrbitalia.com/materials/porphyry</loc>
-</url>
-<url>
-  <loc>http://mrbitalia.com/quarries</loc>
-</url>
-<url>
-  <loc>http://mrbitalia.com/blocks</loc>
-</url>
-<url>
-  <loc>http://mrbitalia.com/slabs</loc>
-</url>
-<url>
-  <loc>http://mrbitalia.com/consultation</loc>
-</url>
-<url>
-  <loc>http://mrbitalia.com/gallery</loc>
-</url>
-<url>
-  <loc>http://mrbitalia.com/contact</loc>
-</url>
-<url>
-  <loc>http://mrbitalia.com/quote</loc>
-</url>
-<url>
-  <loc>http://mrbitalia.com/privacy</loc>
-</url>
+  <url>
+    <loc>http://mrbitalia.com/</loc>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>http://mrbitalia.com/materials/marble-and-stone</loc>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>http://mrbitalia.com/slabs-calacatta-marble-walls-and-floors</loc>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>http://mrbitalia.com/slabs-statuario-marble-bathrooms-tiles</loc>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>http://mrbitalia.com/slabs-arabescato-marble-stone-flooring</loc>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>http://mrbitalia.com/slabs-carrara-marble-kitchens-tiles</loc>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>http://mrbitalia.com/slabs-onyx-marble-book-matched-walls</loc>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>http://mrbitalia.com/slabs-available-marble-flooring</loc>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>http://mrbitalia.com/about-marble-supplier-london</loc>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>http://mrbitalia.com/materials/onyx-supplier</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>http://mrbitalia.com/materials/travertine-supplier</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>http://mrbitalia.com/materials/porphyry</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>http://mrbitalia.com/Tiles</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>http://mrbitalia.com/quarries</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>http://mrbitalia.com/blocks</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>http://mrbitalia.com/consultation</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>http://mrbitalia.com/gallery</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>http://mrbitalia.com/samples</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>http://mrbitalia.com/contact</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>http://mrbitalia.com/quote</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>http://mrbitalia.com/faq</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>http://mrbitalia.com/slabs</loc>
+    <priority>0.80</priority>
+  </url>
 </urlset>

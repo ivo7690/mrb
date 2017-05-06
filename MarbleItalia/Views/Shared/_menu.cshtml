@@ -27,12 +27,12 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li class="item">
-                            <a href="/about">
+                            <a href="/about-marble-supplier-london">
                                 Who we are
                             </a>
                         </li>
                         <li class="item">
-                            <a href="/about#what">
+                            <a href="/about-marble-supplier-london#what">
                                 What we offer
                             </a>
                         </li>
@@ -82,30 +82,30 @@
                         </li>
                     </ul>
                 </li>
-                <li @*class="dropdown"*@>
-                    @Html.ActionLink("Marble Tiles", "Index", "Tiles")
+                <li class="dropdown">
+                    @*@Html.ActionLink("Marble Tiles", "Index", "Tiles")*@
 
 
-                    @*<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         Marble Tiles
-                    </a>*@
-                    @*<ul class="dropdown-menu">
+                    </a>
+                    <ul class="dropdown-menu">
                         <li class="item">
-                            @Html.ActionLink("Calacatta", "", "")
+                            @Html.ActionLink("Calacatta", "Calacatta", "Tiles")
                         </li>
                         <li class="item">
-                            @Html.ActionLink("Statuario", "", "")
+                            @Html.ActionLink("Statuario", "Statuario", "Tiles")
                         </li>
                         <li class="item">
-                            @Html.ActionLink("Arabescato", "", "")
+                            @Html.ActionLink("Arabescato", "Arabescato", "Tiles")
                         </li>
                         <li class="item">
-                            @Html.ActionLink("Carrara", "", "")
+                            @Html.ActionLink("Carrara", "Carrara", "Tiles")
                         </li>
                         <li class="item">
-                            @Html.ActionLink("Onyx", "", "")
+                            @Html.ActionLink("All Available", "AllTiles", "Tiles")
                         </li>
-                    </ul>*@
+                    </ul>
                 </li>
                 <li>
                     @Html.ActionLink("Quarries", "Quarries", "Home")
@@ -126,6 +126,9 @@
                         </li>
                     </ul>
                 </li>
+                <li>
+                    @Html.ActionLink("Samples", "Samples", "Home")
+                </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         Contact
@@ -136,6 +139,9 @@
                         </li>
                         <li class="item">
                             @Html.ActionLink("Get a quote", "Quote", "Home")
+                        </li>
+                        <li class="item">
+                            @Html.ActionLink("FAQ", "FAQ", "Home")
                         </li>
                     </ul>
                 </li>

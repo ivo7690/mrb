@@ -19,7 +19,7 @@ namespace MarbleItalia.Controllers
             return View();
         }
 
-        [Route("about")]
+        [Route("about-marble-supplier-london")]
         public ActionResult About()
         {
             return View();
@@ -58,6 +58,20 @@ namespace MarbleItalia.Controllers
         [Route("quote")]
         [HttpGet]
         public ActionResult Quote()
+        {
+            return View();
+        }
+
+        [Route("faq")]
+        [HttpGet]
+        public ActionResult FAQ()
+        {
+            return View();
+        }
+
+        [Route("samples")]
+        [HttpGet]
+        public ActionResult Samples()
         {
             return View();
         }

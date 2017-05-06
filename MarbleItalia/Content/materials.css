@@ -25,27 +25,40 @@
     padding: 4px 0px;
     height: 45px;
     font-size: 15px !important;
+    text-transform:capitalize
 }
 
 .slabContainer {
-    max-height: 190px;
     overflow: hidden;
     position: relative;
+    cursor:pointer;
+    margin-bottom:20px;
+    padding:2px;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .slabImage img {
     max-width: 100%;
 }
 
+.slabImage {
+    max-height: 140px;
+    overflow: hidden;
+    height: 140px;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .slabText {
-    bottom: 0;
-    right: 0;
-    position: absolute;
     text-align: center;
     padding: 8px 10px;
     color: #FFF;
-    background: rgba(0, 0, 0, 0.5);
-    font-size: 15px !important;
+    font-size: 12px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .backgroundSliding {    
@@ -53,4 +66,32 @@
     -moz-transition: all 2s ease;
     -o-transition: all 2s ease;
     transition: all 2s ease;
+}
+
+@media screen and (min-width: 768px)
+{
+#slabsModal .modal-dialog {
+    width: 100%;
+    padding-top: 100px;
+}
+
+}
+#slabsModal {
+    outline: 0;
+}
+
+#slabsModal .modal-content {
+    /*background-color:rgba(0, 0, 0, 0.7);*/
+    background-color:transparent;
+    box-shadow:none !important;
+    border:none !important;
+    border-radius:0 !important;
+    color:#FFF !important;
+}
+#slabsModal .close {
+    color:#FFF !important;
+
+}
+.modal-backdrop.in {
+opacity:0.9
 }

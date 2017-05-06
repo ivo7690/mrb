@@ -1,0 +1,191 @@
+﻿@model MarbleItalia.Controllers.TilesController.TilesViewModel
+
+@{
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+    ViewBag.Title = Model.MetaTitle;
+}
+@section Meta{
+<meta name="description" content="@Model.MetaDescription" />
+<meta name="keywords" content="@Model.MetaKeywords" />
+}
+@section Style{
+    <link href="~/Scripts/fancybox/jquery.fancybox.css" rel="stylesheet" />
+    <link href="~/Content/materials.css" rel="stylesheet" />
+}
+@section Header{
+    <div class="animatedParent animateOnce">
+    <div class="header-content animated fadeInDown">
+        <h2>@Model.Title</h2>
+    </div>
+</div>
+}
+
+<div class="container body-content ">
+    <h3>@Model.Title</h3>
+    <p>
+        We offer @Model.TypeMarble marble tiles at unbelievable prices.
+    </p>
+    <p>
+        We don’t keep @Model.TypeMarble marble tiles in stock as when you buy stocks of marble tiles, the risk of receiving products
+        which come from different slabs batches is quite common. That’s why once we receive an order, we process slabs or blocks
+        from the same batch. This means that there is absolutely no risk that you’ll get @Model.TypeMarble marble tiles which present
+        colour variations or different grades of quality. We guarantee you’ll get a first quality selected product at a very competitive price.
+    </p>
+    <p>
+        Our tiles are expressions of quality, versatility and precision in the use of natural stone.
+        All tiles can be produced with a thickness from 10 to 20 mm, and are bevelled and calibrated. Versatile tiles suitable for a
+        number of applications including Hallways, bathrooms, kitchens, bedrooms, living rooms and wet rooms.
+    </p>
+    <p>
+
+    </p>
+    <p>
+        Delivery: Once you make your order, if you require less than 100m2, it usually takes 3 weeks (2 weeks to manufacture and 4 working
+        days of transport from Verona or Carrara to London).
+    </p>
+    <p>
+        If the project requires more than 100m2, it takes between 4 to 5 weeks for delivery to London.
+    </p>
+    <p>
+    </p>
+    <p>
+        Also suitable for underfloor heating as natural stone is a great conductor of heat.
+    </p>
+    <p>
+        In order to offer a complete service to our clients, we can also produce cut to size projects based on your specific project requirements.
+    </p>
+
+    @if (Model.TypeMarble.ToLower() == "all") {
+        <p>           
+            <strong>MARBLE TILES AVAILABLE:</strong>  
+    </p>
+        <p>
+            Bardiglio Nuvolato, Bardiglio imperiale, Nero marquina, Dark Emperador, Light emperador, Bianco perlino, Rosa perlino, Bianco Carrara C, Bianco Carrara CD,  Botticino classico, Botticino fiorito, Daino Reale, Giallo d’Istria, Giallo Reale, Grigio Carnico, Travertino Classico, Travertino Noce, Beige Alpi, Arabescato Vagli, Calacatta Vagli, Pietra Serena, Pietra Grey, Verde Guatemala.
+        </p>
+    }
+    @if (Model != null && Model.Tiles != null && Model.Tiles.Any())
+    {
+        <h3 id="liveStock">@Model.TypeMarble Marble Tiles</h3>
+        <div class="row">
+            @foreach (var c in Model.Tiles)
+            {
+                <p><strong>@c.category</strong> </p>
+                foreach (var m in c.tiles) { 
+                <div class="col-sm-3 col-xs-6">
+                    <div class="slabContainer">
+                        <a class="materialGallery" rel="material-@c.category.ToLower().Replace(" ", " -")" href="@m.BasePath/@m.SrcImage">
+                            <div class="slabImage" style="background-image:url('@m.BasePath/@m.SrcImage')">
+
+                            </div>
+                        </a>
+                        <div class="slabText">@m.Name</div>
+                    </div>
+                </div>
+                }
+                <div class="clearfix"></div>
+    <p class="text-center" style="margin-bottom:20px">
+        <a class='btn btn-lg btn-mrb-light' href='/quote?ref=@c.category.ToLower().Replace(" ", "-")'>Get a Quote</a>
+    </p>
+    <hr />
+            }
+        </div>
+
+    }
+
+    <hr />
+    <div class="row">
+        <div class="col-sm-6">
+            <h4>Square formats</h4>
+            <div style="width:100px;height:100px;border:1px solid #000;float:left;  margin:0 10px 10px 0;background-image:url(/Images/marble/top-quality-arabescato.jpg);background-size:cover">
+
+            </div>
+            <table>
+                <tr>
+                    <th width="110">Centimeters</th>
+                    <th>Inches</th>
+                </tr>
+                <tr>
+                    <td>30.5x30.5x1</td>
+                    <td>12x12x3/8''</td>
+                </tr>
+
+                <tr>
+                    <td> 40x40x1</td>
+                    <td>116x16x3/8''</td>
+                </tr>
+                <tr>
+                    <td>45.7x45.7x1 </td>
+                    <td>18x18x3/8''</td>
+                </tr>
+                <tr>
+                    <td>61x61x1</td>
+                    <td>24x24x3/8''</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-sm-6">
+            <h4>
+                Rectangular formats
+            </h4>
+            <div style="width:100px;height:170px;border:1px solid #000;float:left; margin:0 10px 10px 0;background-image:url(/Images/marble/top-quality-arabescato.jpg);background-size:cover">
+
+            </div>
+            <table>
+                <tr>
+                    <th width="110">Centimeters</th>
+                    <th>Inches</th>
+                </tr>
+                <tr>
+                    <td>30.5x10x1</td>
+                    <td>12x4x3/8''</td>
+                </tr>
+                <tr>
+                    <td>30.5x15x1</td>
+                    <td>12x6x3/8''</td>
+                </tr>
+                <tr>
+                    <td>61x30.5x1</td>
+                    <td>24x12x3/8''</td>
+                </tr>
+                <tr>
+                    <td>40x20x1</td>
+                    <td>16x8x3/8''</td>
+                </tr>
+                <tr>
+                    <td>45.7x20x1</td>
+                    <td>18x8x3/8''</td>
+                </tr>
+                <tr>
+                    <td>91.4x30.5x1</td>
+                    <td>36x12x3/8''</td>
+                </tr>
+                <tr>
+                    <td>91.4x45.7x1</td>
+                    <td>36x18x3/8''</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <h4>
+                Cut to size
+            </h4>
+            <img src="/Images/exagon-marble.jpg" alt="exagon" class="pull-left" style="margin-right:10px" />
+            <p style="font-size: 14px;">
+                In order to give to the customer a full service 360°, we are also able to realize on purpose jobs and particular finishings.
+            </p>
+        </div>
+    </div>
+
+</div>
+@section scripts{
+<script src="~/Scripts/fancybox/jquery.fancybox.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".materialGallery").fancybox();
+            
+        });
+    </script>
+    }

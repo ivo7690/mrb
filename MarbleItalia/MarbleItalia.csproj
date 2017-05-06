@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -186,52 +187,59 @@
   <ItemGroup>
     <Content Include="Images\100percentdesign_horizontal.jpg" />
     <Content Include="Images\100percentdesign_vertical.jpg" />
+    <Content Include="Images\exagon-marble.jpg" />
+    <Content Include="Images\marble\antique-brown.jpg" />
+    <Content Include="Images\marble\Arabescato-corchia.jpg" />
+    <Content Include="Images\marble\arabescato-orobico.jpg" />
+    <Content Include="Images\marble\arabescato-royal.jpg" />
+    <Content Include="Images\marble\Azul-Boquira.jpg" />
     <Content Include="Images\marble\azul-macaubas.jpg" />
     <Content Include="Images\marble\bardiglio-imperiale.jpg" />
     <Content Include="Images\marble\bardiglio-nuvolato.jpg" />
     <Content Include="Images\marble\beige-alpi-c.jpg" />
     <Content Include="Images\marble\beige-alpi-d.jpg" />
+    <Content Include="Images\marble\Bianco-Apuano.jpg" />
     <Content Include="Images\marble\bianco-carrara-c.jpg" />
     <Content Include="Images\marble\bianco-carrara-cd.jpg" />
+    <Content Include="Images\marble\blackwood .jpg" />
+    <Content Include="Images\marble\Blue-Calcite.jpg" />
+    <Content Include="Images\marble\Brown-coffee.jpg" />
     <Content Include="Images\marble\calacatta-extra.jpg" />
+    <Content Include="Images\marble\calacatta-gold.jpg" />
+    <Content Include="Images\marble\CALACATTA-GREY.jpg" />
+    <Content Include="Images\marble\Calacatta-Vagli.jpg" />
+    <Content Include="Images\marble\CALACATTA_BORGHINI.jpg" />
+    <Content Include="Images\marble\carrara-grey-royal.jpg" />
+    <Content Include="Images\marble\carrara-imperial-blue.jpg" />
+    <Content Include="Images\marble\Cremo-Delicato.jpg" />
     <Content Include="Images\marble\emperador-dark.jpg" />
     <Content Include="Images\marble\Emperador-Light.jpg" />
     <Content Include="Images\marble\foussana-grey.jpg" />
     <Content Include="Images\marble\galala.jpg" />
     <Content Include="Images\marble\green-guatemala.jpg" />
+    <Content Include="Images\marble\GRIGIO_FIOR_DI_BOSCO.jpg" />
     <Content Include="Images\marble\negro-marquina.jpg" />
-    <Content Include="Images\marble\new\_0000_riace-bronze.jpg" />
-    <Content Include="Images\marble\new\_0001_palissandro-bluette.jpg" />
-    <Content Include="Images\marble\new\_0002_ombra-Caravaggio .jpg" />
-    <Content Include="Images\marble\new\_0003_noir-gioia .jpg" />
-    <Content Include="Images\marble\new\_0004_GRIGIO_FIOR_DI_BOSCO.jpg" />
-    <Content Include="Images\marble\new\_0005_grigio-orobico.jpg" />
-    <Content Include="Images\marble\new\_0006_Cremo-Delicato.jpg" />
-    <Content Include="Images\marble\new\_0007_CALACATTA_BORGHINI.jpg" />
-    <Content Include="Images\marble\new\_0008_Calacatta-Vagli.jpg" />
-    <Content Include="Images\marble\new\_0009_calacatta-gold.jpg" />
-    <Content Include="Images\marble\new\_0010_Brown-coffee.jpg" />
-    <Content Include="Images\marble\new\_0011_Blue-Calcite.jpg" />
-    <Content Include="Images\marble\new\_0012_blackwood .jpg" />
-    <Content Include="Images\marble\new\_0013_Bianco-Apuano.jpg" />
-    <Content Include="Images\marble\new\_0014_Azul-Boquira.jpg" />
-    <Content Include="Images\marble\new\_0015_Arabescato-corchia.jpg" />
-    <Content Include="Images\marble\new\_0016_striato-olimpico.jpg" />
-    <Content Include="Images\marble\new\_0017_Statuario-Extra.jpg" />
-    <Content Include="Images\marble\new\_0018_statuarietto.jpg" />
-    <Content Include="Images\marble\new\_0019_sodalite_blue.jpg" />
-    <Content Include="Images\marble\new\_0020_ROSA_PORTOGALLO.jpg" />
+    <Content Include="Images\marble\noir-gioia .jpg" />
     <Content Include="Images\marble\noir-saint-laurent.jpg" />
+    <Content Include="Images\marble\ombra-Caravaggio .jpg" />
+    <Content Include="Images\marble\palissandro-bluette.jpg" />
     <Content Include="Images\marble\pietra-grey.jpg" />
+    <Content Include="Images\marble\riace-bronze.jpg" />
     <Content Include="Images\marble\rojo-alicante.jpg" />
+    <Content Include="Images\marble\ROSA_PORTOGALLO.jpg" />
+    <Content Include="Images\marble\SILVER-PORTORO.jpg" />
     <Content Include="Images\marble\silvia.jpg" />
+    <Content Include="Images\marble\sodalite_blue.jpg" />
     <Content Include="Images\marble\statuarietto.jpg" />
+    <Content Include="Images\marble\Statuario-Extra.jpg" />
     <Content Include="Images\marble\statuario-venato.jpg" />
+    <Content Include="Images\marble\striato-olimpico.jpg" />
     <Content Include="Images\marble\sunny.jpg" />
     <Content Include="Images\marble\thala-beige.jpg" />
     <Content Include="Images\marble\thassos.jpg" />
     <Content Include="Images\marble\top-quality-arabescato.jpg" />
     <Content Include="Images\marble\top-quality-calacatta.jpg" />
+    <Content Include="Images\marble\travertino-bianco.jpg" />
     <Content Include="Images\marble\travertino-silver.jpg" />
     <Content Include="Images\marble\travertino-tiziano.jpg" />
     <Content Include="Images\marble\triesta.jpg" />
@@ -247,9 +255,28 @@
     <Content Include="Images\onyx\red-onyx.jpg" />
     <Content Include="Images\onyx\white-gold-vein-onyx.jpg" />
     <Content Include="Images\onyx\white-onyx.jpg" />
-    <Content Include="Images\slabs\calacatta-borghini-range-rover.jpg" />
-    <Content Include="Images\slabs\calacatta-borghini.jpg" />
-    <Content Include="Images\slabs\calacatta-michelangelo-effeitalia.jpg" />
+    <Content Include="Images\sample-caravaggio-proposal.jpg" />
+    <Content Include="Images\sample-caravaggio.jpg" />
+    <Content Include="Images\sampleStatuario.jpg" />
+    <Content Include="Images\sampleStatuarioProposal.jpg" />
+    <Content Include="Images\slide\slabs\arabescato-bookmatch.jpg" />
+    <Content Include="Images\slide\slabs\arabescato-proposal.jpg" />
+    <Content Include="Images\slide\slabs\arabescato.jpg" />
+    <Content Include="Images\slide\slabs\calacatta-Bookmatch-MI-0637.jpg" />
+    <Content Include="Images\slide\slabs\calacatta-borghini-range-rover.jpg" />
+    <Content Include="Images\slide\slabs\calacatta-borghini.jpg" />
+    <Content Include="Images\slide\slabs\caravaggio-bookmatch.jpg" />
+    <Content Include="Images\slide\slabs\caravaggio-proposal.jpg" />
+    <Content Include="Images\slide\slabs\caravaggio.jpg" />
+    <Content Include="Images\slide\slabs\carrara-proposal.jpg" />
+    <Content Include="Images\slide\slabs\carrara.jpg" />
+    <Content Include="Images\slide\slabs\onix-bookmatch.jpg" />
+    <Content Include="Images\slide\slabs\onix-bookmatch1.jpg" />
+    <Content Include="Images\slide\slabs\onix-proposal.jpg" />
+    <Content Include="Images\slide\slabs\onix.jpg" />
+    <Content Include="Images\slide\slabs\statuario-bookmatch.jpg" />
+    <Content Include="Images\slide\slabs\statuario-proposal.jpg" />
+    <Content Include="Images\slide\slabs\statuario.jpg" />
     <Content Include="TemplateMail.html" />
     <Content Include="googlea77b1b3cb7020df6.html" />
     <Content Include="Images\gallery\kitchen\carrara-kitchen.jpg" />
@@ -521,7 +548,6 @@
     <Content Include="Images\logo-marbleitalia.png" />
     <Content Include="Images\logo-marbleitalia_black.png" />
     <Content Include="Images\map-marker-32.png" />
-    <Content Include="Images\marble\arabescato.jpg" />
     <Content Include="Images\marble\bianco-covelano-silvergold.jpg" />
     <Content Include="Images\marble\bianco-covelano-vena-oro.jpg" />
     <Content Include="Images\marble\bianco-covelano-venosta.jpg" />
@@ -656,7 +682,9 @@
     <Content Include="Scripts\smoothDivScroll\js\source\jquery.mousewheel.js" />
     <Content Include="Scripts\smoothDivScroll\js\source\jquery.smoothDivScroll-1.3.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="sitemap.xml" />
+    <Content Include="sitemap.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -697,6 +725,10 @@
     <Content Include="Views\Slabs\Arabescato.cshtml" />
     <Content Include="Views\Slabs\AllAvailable.cshtml" />
     <Content Include="Views\Tiles\Index.cshtml" />
+    <Content Include="Views\Home\FAQ.cshtml" />
+    <Content Include="Views\Home\Samples.cshtml" />
+    <Content Include="Views\Tiles\Master.cshtml" />
+    <Content Include="Views\Tiles\MasterCustom.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,409 +1,415 @@
-﻿@{
+﻿@{    
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
     ViewBag.Title = "Quote";
 }
 @section Meta{
     <meta name="description" content="Request a Quote at Marble Italia" />
 
 }
+
 @section Header{
-    <div class="header-content animated fadeInDown">
-        <h2>@ViewBag.Title</h2>
+    <div class="animatedParent animateOnce">
+        <div class="header-content animated fadeInDown">
+            <h2>@ViewBag.Title</h2>
+        </div>
     </div>
 }
 
-<div class="row">
-    <div class="col-xs-12">
-        <h3>Request a Quote</h3>
-        <p>
-            Please fill out the information below.
-        </p>
+<div class="container body-content ">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h3>Request a Quote</h3>
+            <p>
+                Please fill out the information below.
+            </p>
+        </div>
     </div>
-</div>
 
-<div class="row">
-    <div class="col-xs-12">
-        <form id="formQuote" action="/quote" method="post" enctype="multipart/form-data">
-            <div class="form-group">
-                <label>Name</label>
-                <input type="text" class="form-control" id="Name" name="Name" placeholder="Enter name">
-            </div>
-            <div class="form-group">
-                <label>Phone</label>
-                <input type="text" class="form-control" id="Phone" name="Phone" placeholder="Enter Phone number">
-            </div>
-            <div class="form-group">
-                <label>E-Mail *</label>
-                <input type="email" class="form-control required" name="Mail" id="Mail" placeholder="Enter email">
-            </div>
-            <div class="form-group">
-                <label>Location</label>
-                <input type="text" class="form-control" id="Location" name="Location" placeholder="Enter Address/City/Country">
-            </div>
-            @*<div class="form-group">
-                    <label>PostCode</label>
-                    <input type="text" class="form-control" id="PostCode" name="PostCode" placeholder="Enter PostCode">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <form id="formQuote" action="/quote" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" id="Name" name="Name" placeholder="Enter name">
                 </div>
                 <div class="form-group">
-                    <label>City</label>
-                    <input type="text" class="form-control" id="City" name="City" placeholder="Enter City">
+                    <label>Phone</label>
+                    <input type="text" class="form-control" id="Phone" name="Phone" placeholder="Enter Phone number">
                 </div>
                 <div class="form-group">
-                    <label>Country</label>
-                    <input type="text" class="form-control" id="Country" name="Country" placeholder="Enter Country">
-                </div>*@
-            <hr />
-            <h4 style="border-bottom: 1px solid;padding-bottom: 10px;padding-left: 5px;">Type of Stone</h4>
-            <div>
-                <label id="TypeOfStone" class="error" style="display: none;">Please fill at least 1 of these fields</label>
-            </div>
-            <div class="form-group">
-                <label>Marble</label>
-                <select class="form-control TypeOfStone" name="Marble" id="Marble">
-                    <option value="">Select...</option>
-                    <option value="Azul Macaubas">
-                        Azul Macaubas
-                    </option>
-                    <option value="Bardiglio Imperiale">
-                        Bardiglio Imperiale
-                    </option>
-                    <option value="Bardiglio Nuvolato">
-                        Bardiglio Nuvolato
-                    </option>
-                    <option value="Beige Alpi C">
-                        Beige Alpi C
-                    </option>
-                    <option value="Beige Alpi D">
-                        Beige Alpi D
-                    </option>
-                    
-                    <option value="Bianco Perlino">
-                        Bianco Perlino
-                    </option>
-                    <option value="Bianco Zandobbio">
-                        Bianco Zandobbio
-                    </option>
-                    <option value="Botticino Classico">
-                        Botticino Classico
-                    </option>
-                    <option value="Botticino Fiorito">
-                        Botticino Fiorito
-                    </option>
-                    <option value="Calacatta">
-                        Calacatta
-                    </option>
-                    <option value="Calacatta Extra">
-                        Calacatta Extra
-                    </option>
-
-                    <option value="Top Quality Calacatta">
-                        Top Quality Calacatta
-                    </option>
-                    <option value="Carrara Bianco C">
-                        Carrara Bianco C
-                    </option>
-                    <option value="Carrara Bianco CD">
-                        Carrara Bianco CD
-                    </option>
-                    <option value="Carrara Bianco Gioia">
-                        Carrara Bianco Gioia
-                    </option>
-
-                    <option value="Commercial Arabescato">
-                        Commercial Arabescato
-                    </option>
-
-                    <option value="Top Quality Arabescato">
-                        Top Quality Arabescato
-                    </option>
-                    <option value="Emperador Dark">
-                        Emperador Dark
-                    </option>
-
-                    <option value="Emperador Light">
-                        Emperador Light
-                    </option>
-
-                    <option value="Foussana Grey">
-                        Foussana Grey
-                    </option>
-
-                    <option value="Galala">
-                        Galala
-                    </option>
-
-                    <option value="Giallo Atlantide">
-                        Giallo Atlantide
-                    </option>
-                    <option value="Giallo Reale">
-                        Giallo Reale
-                    </option>
-                    <option value="Giallo Siena Extra">
-                        Giallo Siena Extra
-                    </option>
-                    <option value="Giallo Siena">
-                        Giallo Siena
-                    </option>
-
-                    <option value="Green Guatemala">
-                        Green Guatemala
-                    </option>
-
-                    <option value="Grigio Carnico">
-                        Grigio Carnico
-                    </option>
-
-                    <option value="Negro Marquina">
-                        Negro Marquina
-                    </option>
-
-                    <option value="Noir Saint Laurent">
-                        Noir Saint Laurent
-                    </option>
-
-                    <option value="Perlato Sicilia">
-                        Perlato Sicilia
-                    </option>
-                    <option value="Pietra della Lessinia">
-                        Pietra della Lessinia
-                    </option>
-
-                    <option value="Pietra Grey">
-                        Pietra Grey
-                    </option>
-
-                    <option value="Portoro Extra">
-                        Portoro Extra
-                    </option>
-                    <option value="Portoro Standard">
-                        Portoro Standard
-                    </option>
-
-                    <option value="Rojo Alicante">
-                        Rojo Alicante
-                    </option>
-
-                    <option value="Rosa Perlino">
-                        Rosa Perlino
-                    </option>
-                    <option value="Rosso Asiago">
-                        Rosso Asiago
-                    </option>
-                    <option value="Silvia">
-                        Silvia
-                    </option>
-                    <option value="Statuarietto">
-                        Statuarietto
-                    </option>
-                    <option value="Statuario">
-                        Statuario
-                    </option>
-                    <option value="Statuario Venato">
-                        Statuario Venato
-                    </option>
-
-                    <option value="Sunny">
-                        Sunny
-                    </option>
-
-                    <option value="Thala Beige">
-                        Thala Beige
-                    </option>
-
-                    <option value="Thassos">
-                        Thassos
-                    </option>
-                    
-                    <option value="Trani Fiorito">
-                        Trani Fiorito
-                    </option>
-
-                    <option value="Triesta">
-                        Triesta
-                    </option>
-                    <option value="Venatino">
-                        Venatino
-                    </option>
-                    <option value="Verde Alpi">
-                        Verde Alpi
-                    </option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>Travertin</label>
-                <select class="form-control TypeOfStone" name="Travertin" id="Travertin">
-                    <option value="">Select...</option>
-                    <option value="Travertino Classico">
-                        Travertino Classico
-                    </option>
-                    <option value="Travertino Giallo">
-                        Travertino Giallo
-                    </option>
-                    <option value="Travertino Navona">
-                        Travertino Navona
-                    </option>
-                    <option value="Travertino Noce">
-                        Travertino Noce
-                    </option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>Limestone</label>
-                <select class="form-control TypeOfStone" name="Limestone" id="Limestone">
-                    <option value="">Select...</option>
-                    <option value="Porphyry">
-                        Porphyry
-                    </option>
-                    <option value="Pietra Serena">
-                        Pietra Serena
-                    </option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>Other</label>
-                <input type="text" class="form-control TypeOfStone" id="otherStone" name="OtherStone" placeholder="Type of stone">
-            </div>
-            <hr />
-            <h4 style="border-bottom: 1px solid;padding-bottom: 10px;padding-left: 5px;">
-                Size
-            </h4>
-            <div class="row">
-                <div class="col-xs-3">
-                    <div>
-                        <label for="TypeSize" class="error" style="display: none;">This field is required.</label>
-                    </div>
-                    <input type="radio" name="TypeSize" value="blocks" class="required"> Blocks<br>
-                    <input type="radio" name="TypeSize" value="slabs" class="required"> Slabs<br>
-                    <input type="radio" name="TypeSize" value="tiles" class="required"> Tiles<br>
-                    <input type="radio" name="TypeSize" value="countertop" class="required"> Countertop<br>
-                    <input type="radio" name="TypeSize" value="steps" class="required"> Steps<br>
-                    <input type="radio" name="TypeSize" value="skirting" class="required"> Skirting<br>
-                    <input type="radio" name="TypeSize" value="otherTypeSize" class="required"> Other<br>
+                    <label>E-Mail *</label>
+                    <input type="email" class="form-control required" name="Mail" id="Mail" placeholder="Enter email">
                 </div>
-                <div class="col-xs-9 optionSize">
-                    <div class="row-fluid">
-                        <div class="form-group col-sm-6 slabs tiles countertop steps skirting">
-                            <label>Finishing</label>
-                            <select name="Finishing" class="form-control">
-                                <option value="">Select...</option>
-                                <option value="Polished">Polished</option>
-                                <option value="Honed">Honed</option>
-                                <option value="Bush-Hammered">Bush-Hammered</option>
-                                <option value="Flamed">Flamed</option>
-                                <option value="Rough">Rough</option>
-                                <option value="Brushed">Brushed</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-sm-6 slabs tiles countertop steps skirting">
-                            <label>Thickness</label>
-                            <div class="input-group">
-                                <input type="text" class="form-control" name="Thickness" value="">
-                                <div class="input-group-addon">inches/cm</div>
-                            </div>
-                        </div>
-                        <div class="form-group col-sm-6 tiles">
-                            <label>Size</label>
-                            <div class="input-group">
-                                <input type="text" class="form-control" name="Size" value="">
-                                <div class="input-group-addon">inches/cm/pcs</div>
-                            </div>
-                        </div>
-                        <div class="form-group col-sm-6 countertop steps skirting">
-                            <label>Lenght</label>
-                            <div class="input-group">
-                                <input type="text" class="form-control" name="Lenght" value="">
-                                <div class="input-group-addon">inches/cm/feet</div>
-                            </div>
-                        </div>
-                        <div class="form-group col-sm-6 countertop steps">
-                            <label>Width</label>
-                            <div class="input-group">
-                                <input type="text" class="form-control" name="Width" value="">
-                                <div class="input-group-addon">inches/cm</div>
-                            </div>
-                        </div>
-                        <div class="form-group col-sm-6 skirting">
-                            <label>Height</label>
-                            <div class="input-group">
-                                <input type="text" class="form-control" name="Height" value="">
-                                <div class="input-group-addon">inches/cm</div>
-                            </div>
-                        </div>
-                        <div class="form-group col-sm-6 blocks slabs tiles countertop steps skirting">
-                            <label>Quantity</label>
-                            <div class="input-group quantity">
-                                <input type="text" class="form-control" name="Quantity" value="">
-                                <div class="input-group-addon countertop">pcs</div>
-                                <div class="input-group-addon blocks">tonn/m2</div>
-                                <div class="input-group-addon slabs tiles">inches/m2</div>
-                                <div class="input-group-addon steps">pcf/m2/sq.f.</div>
-                                <div class="input-group-addon skirting">ml/l.f.</div>
-                            </div>
-                        </div>
-                        <div class="form-group col-sm-6 countertop steps skirting">
-                            <label>Edge</label>
-                            <input type="text" class="form-control" name="Edge" value="">
+                <div class="form-group">
+                    <label>Location</label>
+                    <input type="text" class="form-control" id="Location" name="Location" placeholder="Enter Address/City/Country">
+                </div>
+                @*<div class="form-group">
+                        <label>PostCode</label>
+                        <input type="text" class="form-control" id="PostCode" name="PostCode" placeholder="Enter PostCode">
+                    </div>
+                    <div class="form-group">
+                        <label>City</label>
+                        <input type="text" class="form-control" id="City" name="City" placeholder="Enter City">
+                    </div>
+                    <div class="form-group">
+                        <label>Country</label>
+                        <input type="text" class="form-control" id="Country" name="Country" placeholder="Enter Country">
+                    </div>*@
+                <hr />
+                <h4 style="border-bottom: 1px solid;padding-bottom: 10px;padding-left: 5px;">Type of Stone</h4>
+                <div>
+                    <label id="TypeOfStone" class="error" style="display: none;">Please fill at least 1 of these fields</label>
+                </div>
+                <div class="form-group">
+                    <label>Marble</label>
+                    <select class="form-control TypeOfStone" name="Marble" id="Marble">
+                        <option value="">Select...</option>
+                        <option value="Azul Macaubas">
+                            Azul Macaubas
+                        </option>
+                        <option value="Bardiglio Imperiale">
+                            Bardiglio Imperiale
+                        </option>
+                        <option value="Bardiglio Nuvolato">
+                            Bardiglio Nuvolato
+                        </option>
+                        <option value="Beige Alpi C">
+                            Beige Alpi C
+                        </option>
+                        <option value="Beige Alpi D">
+                            Beige Alpi D
+                        </option>
 
+                        <option value="Bianco Perlino">
+                            Bianco Perlino
+                        </option>
+                        <option value="Bianco Zandobbio">
+                            Bianco Zandobbio
+                        </option>
+                        <option value="Botticino Classico">
+                            Botticino Classico
+                        </option>
+                        <option value="Botticino Fiorito">
+                            Botticino Fiorito
+                        </option>
+                        <option value="Calacatta">
+                            Calacatta
+                        </option>
+                        <option value="Calacatta Extra">
+                            Calacatta Extra
+                        </option>
+
+                        <option value="Top Quality Calacatta">
+                            Top Quality Calacatta
+                        </option>
+                        <option value="Carrara Bianco C">
+                            Carrara Bianco C
+                        </option>
+                        <option value="Carrara Bianco CD">
+                            Carrara Bianco CD
+                        </option>
+                        <option value="Carrara Bianco Gioia">
+                            Carrara Bianco Gioia
+                        </option>
+
+                        <option value="Commercial Arabescato">
+                            Commercial Arabescato
+                        </option>
+
+                        <option value="Top Quality Arabescato">
+                            Top Quality Arabescato
+                        </option>
+                        <option value="Emperador Dark">
+                            Emperador Dark
+                        </option>
+
+                        <option value="Emperador Light">
+                            Emperador Light
+                        </option>
+
+                        <option value="Foussana Grey">
+                            Foussana Grey
+                        </option>
+
+                        <option value="Galala">
+                            Galala
+                        </option>
+
+                        <option value="Giallo Atlantide">
+                            Giallo Atlantide
+                        </option>
+                        <option value="Giallo Reale">
+                            Giallo Reale
+                        </option>
+                        <option value="Giallo Siena Extra">
+                            Giallo Siena Extra
+                        </option>
+                        <option value="Giallo Siena">
+                            Giallo Siena
+                        </option>
+
+                        <option value="Green Guatemala">
+                            Green Guatemala
+                        </option>
+
+                        <option value="Grigio Carnico">
+                            Grigio Carnico
+                        </option>
+
+                        <option value="Negro Marquina">
+                            Negro Marquina
+                        </option>
+
+                        <option value="Noir Saint Laurent">
+                            Noir Saint Laurent
+                        </option>
+
+                        <option value="Perlato Sicilia">
+                            Perlato Sicilia
+                        </option>
+                        <option value="Pietra della Lessinia">
+                            Pietra della Lessinia
+                        </option>
+
+                        <option value="Pietra Grey">
+                            Pietra Grey
+                        </option>
+
+                        <option value="Portoro Extra">
+                            Portoro Extra
+                        </option>
+                        <option value="Portoro Standard">
+                            Portoro Standard
+                        </option>
+
+                        <option value="Rojo Alicante">
+                            Rojo Alicante
+                        </option>
+
+                        <option value="Rosa Perlino">
+                            Rosa Perlino
+                        </option>
+                        <option value="Rosso Asiago">
+                            Rosso Asiago
+                        </option>
+                        <option value="Silvia">
+                            Silvia
+                        </option>
+                        <option value="Statuarietto">
+                            Statuarietto
+                        </option>
+                        <option value="Statuario">
+                            Statuario
+                        </option>
+                        <option value="Statuario Venato">
+                            Statuario Venato
+                        </option>
+
+                        <option value="Sunny">
+                            Sunny
+                        </option>
+
+                        <option value="Thala Beige">
+                            Thala Beige
+                        </option>
+
+                        <option value="Thassos">
+                            Thassos
+                        </option>
+
+                        <option value="Trani Fiorito">
+                            Trani Fiorito
+                        </option>
+
+                        <option value="Triesta">
+                            Triesta
+                        </option>
+                        <option value="Venatino">
+                            Venatino
+                        </option>
+                        <option value="Verde Alpi">
+                            Verde Alpi
+                        </option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Travertin</label>
+                    <select class="form-control TypeOfStone" name="Travertin" id="Travertin">
+                        <option value="">Select...</option>
+                        <option value="Travertino Classico">
+                            Travertino Classico
+                        </option>
+                        <option value="Travertino Giallo">
+                            Travertino Giallo
+                        </option>
+                        <option value="Travertino Navona">
+                            Travertino Navona
+                        </option>
+                        <option value="Travertino Noce">
+                            Travertino Noce
+                        </option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Limestone</label>
+                    <select class="form-control TypeOfStone" name="Limestone" id="Limestone">
+                        <option value="">Select...</option>
+                        <option value="Porphyry">
+                            Porphyry
+                        </option>
+                        <option value="Pietra Serena">
+                            Pietra Serena
+                        </option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Other</label>
+                    <input type="text" class="form-control TypeOfStone" id="otherStone" name="OtherStone" placeholder="Type of stone">
+                </div>
+                <hr />
+                <h4 style="border-bottom: 1px solid;padding-bottom: 10px;padding-left: 5px;">
+                    Size
+                </h4>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <div>
+                            <label for="TypeSize" class="error" style="display: none;">This field is required.</label>
                         </div>
-                        <div class="clearfix"></div>
-                        <div class="form-group col-sm-12 countertop otherTypeSize">
-                            <label>Description</label>
-                            <textarea class="form-control" rows="3" name="TypeSizeDescription"></textarea>
+                        <input type="radio" name="TypeSize" value="blocks" class="required"> Blocks<br>
+                        <input type="radio" name="TypeSize" value="slabs" class="required"> Slabs<br>
+                        <input type="radio" name="TypeSize" value="tiles" class="required"> Tiles<br>
+                        <input type="radio" name="TypeSize" value="countertop" class="required"> Countertop<br>
+                        <input type="radio" name="TypeSize" value="steps" class="required"> Steps<br>
+                        <input type="radio" name="TypeSize" value="skirting" class="required"> Skirting<br>
+                        <input type="radio" name="TypeSize" value="otherTypeSize" class="required"> Other<br>
+                    </div>
+                    <div class="col-xs-9 optionSize">
+                        <div class="row-fluid">
+                            <div class="form-group col-sm-6 slabs tiles countertop steps skirting">
+                                <label>Finishing</label>
+                                <select name="Finishing" class="form-control">
+                                    <option value="">Select...</option>
+                                    <option value="Polished">Polished</option>
+                                    <option value="Honed">Honed</option>
+                                    <option value="Bush-Hammered">Bush-Hammered</option>
+                                    <option value="Flamed">Flamed</option>
+                                    <option value="Rough">Rough</option>
+                                    <option value="Brushed">Brushed</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-sm-6 slabs tiles countertop steps skirting">
+                                <label>Thickness</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" name="Thickness" value="">
+                                    <div class="input-group-addon">inches/cm</div>
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-6 tiles">
+                                <label>Size</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" name="Size" value="">
+                                    <div class="input-group-addon">inches/cm/pcs</div>
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-6 countertop steps skirting">
+                                <label>Lenght</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" name="Lenght" value="">
+                                    <div class="input-group-addon">inches/cm/feet</div>
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-6 countertop steps">
+                                <label>Width</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" name="Width" value="">
+                                    <div class="input-group-addon">inches/cm</div>
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-6 skirting">
+                                <label>Height</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" name="Height" value="">
+                                    <div class="input-group-addon">inches/cm</div>
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-6 blocks slabs tiles countertop steps skirting">
+                                <label>Quantity</label>
+                                <div class="input-group quantity">
+                                    <input type="text" class="form-control" name="Quantity" value="">
+                                    <div class="input-group-addon countertop">pcs</div>
+                                    <div class="input-group-addon blocks">tonn/m2</div>
+                                    <div class="input-group-addon slabs tiles">inches/m2</div>
+                                    <div class="input-group-addon steps">pcf/m2/sq.f.</div>
+                                    <div class="input-group-addon skirting">ml/l.f.</div>
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-6 countertop steps skirting">
+                                <label>Edge</label>
+                                <input type="text" class="form-control" name="Edge" value="">
+
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="form-group col-sm-12 countertop otherTypeSize">
+                                <label>Description</label>
+                                <textarea class="form-control" rows="3" name="TypeSizeDescription"></textarea>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <hr />
-            <div class="form-group">
-                <label>Message</label>
-                <textarea name="Message" class="form-control" placeholder="Enter message"></textarea>
-            </div>
+                <hr />
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea name="Message" class="form-control" placeholder="Enter message"></textarea>
+                </div>
 
-            <div class="form-group">
-                <label>Attach your plan/drawn concepts</label>
-                <input type="file" name="attach" id="fileAttach" accept=".pdf,.doc,.docx,image/*" />
-            </div>
-            <button type="submit" class="btn btn-default">Send</button>
-        </form>
+                <div class="form-group">
+                    <label>Attach your plan/drawn concepts</label>
+                    <input type="file" name="attach" id="fileAttach" accept=".pdf,.doc,.docx,image/*" />
+                </div>
+                <button type="submit" class="btn btn-default">Send</button>
+            </form>
+        </div>
     </div>
 </div>
-@section Scripts{
-    <script>
-        $(document).ready(function () {
-            //  alert($("#formQuote").serialize());
-            $("input[name=TypeSize]:radio").change(function () {
-                console.log($(this).val());
-                $(".optionSize .form-group").hide();
-                $(".optionSize .form-group .form-control").val("");
-                $(".optionSize ." + $(this).val()).show();
-                $(".quantity .input-group-addon").hide();
-                $(".quantity .input-group-addon." + $(this).val()).show();
+    @section Scripts{
+        <script>
+            $(document).ready(function () {
+                //  alert($("#formQuote").serialize());
+                $("input[name=TypeSize]:radio").change(function () {
+                    console.log($(this).val());
+                    $(".optionSize .form-group").hide();
+                    $(".optionSize .form-group .form-control").val("");
+                    $(".optionSize ." + $(this).val()).show();
+                    $(".quantity .input-group-addon").hide();
+                    $(".quantity .input-group-addon." + $(this).val()).show();
 
+                });
+
+                //file size validate max 4Mb
+                $('#fileAttach').change(function () {
+                    var f = this.files[0];
+                    if (f.size > 4194304 || f.fileSize > 4194304) {
+                        alert("File must be less than 4Mb");
+                        this.value = null;
+                    }
+                });
+
+                //Group validate type of stone
+                $(".TypeOfStone").change(function () {
+                    $(".TypeOfStone").not(this).val("");
+                });
+
+                $("#formQuote").submit(function (event) {
+                    if ($("#Marble").val() != "" || $("#Travertin").val() != "" || $("#Limestone").val() != "" || $("input[name=OtherStone]").val() != "") {
+                        $("#TypeOfStone").hide();
+                    }
+                    else {
+                        $("#TypeOfStone").show();
+                        event.preventDefault();
+                    }
+                });
             });
 
-            //file size validate max 4Mb
-            $('#fileAttach').change(function () {
-                var f = this.files[0];
-                if (f.size > 4194304 || f.fileSize > 4194304) {
-                    alert("File must be less than 4Mb");
-                    this.value = null;
-                }
-            });
-
-            //Group validate type of stone
-            $(".TypeOfStone").change(function () {
-                $(".TypeOfStone").not(this).val("");
-            });
-
-            $("#formQuote").submit(function (event) {
-                if ($("#Marble").val() != "" || $("#Travertin").val() != "" || $("#Limestone").val() != "" || $("input[name=OtherStone]").val() != "") {
-                    $("#TypeOfStone").hide();
-                }
-                else {
-                    $("#TypeOfStone").show();
-                    event.preventDefault();
-                }
-            });
-        });
-
-    </script>
-}
+        </script>
+    }
