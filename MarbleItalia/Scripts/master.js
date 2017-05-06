@@ -23,19 +23,19 @@ $('#main-menu .navbar-nav li a').each(function () {
 
 });
 
-$(window).load(function () {
-    $('#overlayLoad').fadeOut();
+//$(window).load(function () {
+//    $('#overlayLoad').fadeOut();
 
-});
+//});
 
-$('body').on({
-    'mousewheel': function (e) {
-        if (e.target.id == 'overlayLoad') {
-            e.preventDefault();
-            e.stopPropagation();
-        }
-    }
-});
+//$('body').on({
+//    'mousewheel': function (e) {
+//        if (e.target.id == 'overlayLoad') {
+//            e.preventDefault();
+//            e.stopPropagation();
+//        }
+//    }
+//});
 
 $(document).ready(function () {
     $('.item-slide.activeSlide').css('transform', 'scale(1)');

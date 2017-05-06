@@ -22,9 +22,16 @@ namespace MarbleItalia
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
+            
+            bundles.Add(new ScriptBundle("~/bundles/customjs").Include(
+                      "~/Scripts/css3-animate-it.js",
+                      "~/Scripts/jquery.cycle.all.js",
+                      "~/Scripts/master.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/animations.css",
+                      "~/Content/responsive.css",
                       "~/Content/site.css"));
 
             // Set EnableOptimizations to false for debugging. For more information,
